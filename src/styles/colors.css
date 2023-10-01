@@ -13,7 +13,3 @@
 .gradiente-color{
     background-color: var(--gradiente);
 }
-
-.main-font{
-    font-family: var(--primary-font);
-}
