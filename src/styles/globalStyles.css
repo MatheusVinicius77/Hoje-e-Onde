@@ -1,0 +1,9 @@
+:root{
+    --blue-primary:#1D203E;
+    --blue-ligth:#393D5E;
+    --white:#FFFFFF;
+    --grey:#FFFFFF;opacity:55%;
+    --gradiente:linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
+
+    --primary-font: 'Actor';
+}
