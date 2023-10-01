@@ -1,0 +1,19 @@
+.main-bg-color{
+    background-color: var(--blue-primary);
+}
+.content-bg-color{
+    background-color: var(--blue-ligth);
+}
+.white-text-color{
+    color: var(--white);
+}
+.grey-text-color{
+    color: var(--grey);
+}
+.gradiente-color{
+    background-color: var(--gradiente);
+}
+
+.main-font{
+    font-family: var(--primary-font);
+}
