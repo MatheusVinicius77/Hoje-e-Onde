@@ -1,9 +1,41 @@
-:root{
-    --blue-primary:#1D203E;
-    --blue-ligth:#393D5E;
-    --white:#FFFFFF;
-    --grey:#FFFFFF;opacity:55%;
-    --gradiente:linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
+:root {
+    --blue-primary: hsl(235, 36%, 18%);
+    --blue-light: #393D5E;
+    --white: #FFFFFF;
+    --white-secondary: rgba(255, 255, 255, 0.55);
+    --grey: #FFFFFF;
+    opacity: 55%;
+    --gradiente: linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
 
-    --primary-font: 'Actor';
+    /* FONTE DA FORMA DOS EVENTOS VERIFICADOS */
+    --font-family-1: 'Actor', sans-serif;
+
+    /* FORMA DOS TÍTULOS DOS EVENTOS (VERIFICADOS, PROXIMOS A VOCÊ) */
+    --font-family-2: 'Roboto Flex', sans-serif;
+
+    /* FONTES DAS CATEGORIAS, DISTANCIAS, FILTROS DA SIDEBAR, ELEMENTOS DENTRO DAS FORMAS  */
+    --font-family-3: 'Lato', sans-serif;
+
+    /* FONTE PARA USERNAME */
+    --font-family-4: 'Roboto Mono', sans-serif;
+
+
+    --font-size-1: 22px;
+    --font-size-2: 20px;
+    --font-size-3: 16px;
+    --fonte-size-4: 8px;
+
+    --weight-1: 100;
+    --weight-2: 400;
+    --weight-3: 700;
+
+
+
+
+
+
+
+
+
+
 }

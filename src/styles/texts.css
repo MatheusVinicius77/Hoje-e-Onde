@@ -1,3 +1,61 @@
-.main-font{
-    font-family: var(--primary-font);
+/* TEXTO DA FORMA DOS EVENTOS VERIFICADOS */
+.text-1 {
+    font-family: var(--font-family-1);
+    font-size: var(--font-size-1);
+    color: var(--white);
+}
+
+/* TEXTO DA FORMA EVENTOS PROXIMOS A VOCÊ */
+.text-2 {
+    font-family: var(--font-family-1);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+    color: var(--white-secondary);
+}
+
+/* TEXO DAS CATEGORIAS, DISTANCIAS, FILTROS DA SIDEBAR, ELEMENTOS DENTRO DAS FORMAS  */
+.text-3 {
+    font-family: var(--font-family-3);
+    font-size: var(--font-size-2);
+    color: var(--white);
+}
+
+/* USUARIO/SOBRENOME */
+.text-4 {
+    font-family: var(--font-family-4);
+    font-size: var(--font-size-2);
+    color: var(--white);
+}
+
+/* INICIO, FAVORITOS, FILTROS, LOGO */
+.text-5 {
+    font-family: var(--font-family-3);
+    font-size: var(--font-size-3);
+    color: var(--white);
+}
+
+/* KILOMETRAGEM DISTANCIA */
+.text-6 {
+    font-family: var(--font-family-3);
+    font-size: var(--font-size-4);
+    color: var(--white-secondary);
+}
+
+/* Eventos verificados e Próximos a você */
+.title-1 {
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-1);
+    color: var(--white);
+}
+
+.weight-1 {
+    font-weight: var(--weight-1);
+}
+
+.weight-2 {
+    font-weight: var(--weight-2);
+}
+
+.weight-3 {
+    font-weight: var(--weight-3);
 }
