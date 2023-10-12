@@ -6,7 +6,8 @@
     --grey: #FFFFFF;
     opacity: 55%;
     --gradiente: linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
-
+    --color-brand-0: rgba(57, 61, 94, 1);
+    --color-brand-1: rgba(29, 32, 62, 1);
     /* FONTE DA FORMA DOS EVENTOS VERIFICADOS */
     --font-family-1: 'Actor', sans-serif;
 
@@ -23,12 +24,12 @@
     --font-size-1: 22px;
     --font-size-2: 20px;
     --font-size-3: 16px;
-    --fonte-size-4: 8px;
+    --font-size-4: 8px;
+
 
     --weight-1: 100;
     --weight-2: 400;
     --weight-3: 700;
-
 
 
 

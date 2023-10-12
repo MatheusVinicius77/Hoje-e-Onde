@@ -1,15 +1,31 @@
-.main-bg-color{
+.main-bg-color {
     background-color: var(--blue-primary);
 }
-.content-bg-color{
+
+.content-bg-color {
     background-color: var(--blue-ligth);
 }
-.white-text-color{
+
+.white-text-color {
     color: var(--white);
 }
-.grey-text-color{
+
+.grey-text-color {
     color: var(--grey);
 }
-.gradiente-color{
+
+.transparent {
+    background-color: transparent;
+}
+
+.gradiente-color {
     background-color: var(--gradiente);
+}
+
+.bg-brand-1 {
+    background-color: var(--color-brand-0);
+}
+
+.bg-brand-2 {
+    background-color: var(--color-brand-1);
 }

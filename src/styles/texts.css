@@ -23,7 +23,7 @@
 /* USUARIO/SOBRENOME */
 .text-4 {
     font-family: var(--font-family-4);
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-3);
     color: var(--white);
 }
 
@@ -59,3 +59,4 @@
 .weight-3 {
     font-weight: var(--weight-3);
 }
+
