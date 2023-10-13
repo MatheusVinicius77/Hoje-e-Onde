@@ -6,7 +6,16 @@
 
 }
 
+.buttonSearch {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
 
+.buttonSearch:hover {
+    background-color: var(--color-brand-1);
+    /* Nova cor de fundo quando o mouse está sobre o botão */
+
+}
 
 input::placeholder {
     font-family: var(--font-family-2);
@@ -21,19 +30,35 @@ input::placeholder {
     border-bottom: 1px solid black;
     margin-bottom: 24px;
     padding-left: 15px;
+
 }
 
-.searchContent {
-    background-color: transparent;
-    border-color: red;
+.userImg {
+    border: 1px solid black;
+    border-color: rgba(167, 62, 231, 1) rgba(0, 235, 255, 1);
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 100%;
+}
 
+.inputSearch {
+    font-family: var(--font-family-3);
+    font-weight: bold;
+    color: whitesmoke;
+    transition: background-color 0.3s ease;
+
+}
+
+
+
+.inputSearch:focus {
+    color: white;
+    font-weight: 700;
+    background-color: var(--color-brand-1);
+    font-family: var(--font-family-2);
 }
 
 .searchBar {
-    padding: 0px 8px 0px 15px;
-}
-
-nav {
     padding: 0px 8px 0px 15px;
 }
 
@@ -46,20 +71,14 @@ nav {
     padding: 10px;
 }
 
-.userImg {
-    border: 1px solid black;
-    border-color: rgba(167, 62, 231, 1) rgba(0, 235, 255, 1);
-    background-size: cover;
-    overflow: hidden;
-    border-radius: 100%;
-}
+
 
 .formSearch {
     row-gap: 8px;
+    padding-left: 15px;
 }
 
 .campoFiltros {
     margin-bottom: 79%;
-    padding-left: 15px;
     border-radius: 5px;
 }

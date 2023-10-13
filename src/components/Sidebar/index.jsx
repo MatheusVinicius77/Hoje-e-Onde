@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import SidebarButton from './Sidebar-button'
 import favorito from '../../assets/icons/favorito.svg'
 import logoInicio from '../../assets/icons/explore.svg'
@@ -18,12 +18,12 @@ export default function Sidebar() {
                 <h1 className='text-4 weight-3'>usuario sobrenome</h1>
             </div>
             <div className={`flex column ${styles.formSearch}`}>
-                <form className={`form-inline  ${styles.searchBar}`}>
+                <form className={`form-inline`}>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <button className={`${styles.buttonSearch} transparent `}><span className={`transparent input-group-text border-right-0 rounded-0`} id="basic-addon1"><img src={search} alt="" /></span></button>
                         </div>
-                        <input className={`transparent ${styles.teste} weight-1 border-left-0 form-control rounded-0 `} type="text" placeholder="Pesquisar" aria-label="Pesquisa" aria-describedby="basic-addon1" />
+                        <input className={`transparent ${styles.inputSearch} weight-1 border-left-0 form-control rounded-0 `} type="text" placeholder="Pesquisar" aria-label="Pesquisa" aria-describedby="basic-addon1" />
                     </div>
                 </form>
                 <nav className={`${styles.nav}`} >
