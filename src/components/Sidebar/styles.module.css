@@ -1,0 +1,47 @@
+.sidebar {
+    width: 250px;
+    height: 844px;
+    padding-left: 15px;
+    border-top-left-radius: 20px;
+
+}
+
+.searchBar {
+    width: 212px;
+    height: 32px;
+    border: 1px;
+    margin-bottom: 15px;
+
+}
+
+input::placeholder {
+    font-family: var(--font-family-2);
+    font-weight: bold;
+    text-decoration: dotted;
+    font-size: var(--font-size-3);
+}
+
+.userInfo {
+    gap: 4px;
+    height: 44px;
+    border-bottom: 1px solid black;
+    margin-bottom: 24px;
+}
+
+.searchContent {
+    background-color: transparent;
+    border-color: red;
+
+}
+
+.userImg {
+    border: 1px solid black;
+    border-color: rgba(167, 62, 231, 1) rgba(0, 235, 255, 1);
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.formSearch {
+    row-gap: 8px;
+}
