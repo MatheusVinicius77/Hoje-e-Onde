@@ -7,6 +7,7 @@ import search from '../../assets/icons/Search.svg'
 import user1 from '../../assets/userIcons/user1.svg'
 import styles from './styles.module.css'
 import Filtros from './Filtros'
+import logo from '../../assets/icons/Logo.svg'
 
 
 export default function Sidebar() {
@@ -25,15 +26,21 @@ export default function Sidebar() {
                         <input className={`transparent ${styles.teste} weight-1 border-left-0 form-control rounded-0 `} type="text" placeholder="Pesquisar" aria-label="Pesquisa" aria-describedby="basic-addon1" />
                     </div>
                 </form>
-                <nav>
+                <nav className={`${styles.nav}`} >
                     <SidebarButton icone={logoInicio} texto={'Inicio'} />
                     <SidebarButton icone={favorito} texto={'Favoritos'} />
                     <SidebarButton icone={newEvent} texto={'Novo Evento'} />
                 </nav>
-                <div >
+                <div className={`${styles.campoFiltros}`}>
                     <Filtros></Filtros>
                 </div>
+
+
             </div>
-        </div>
+            <footer className={` flex align-center ${styles.footer}`}>
+                <img src={logo} alt="" />
+                <h1 className={`text-5 weight-3 ${styles.logo}`} >Hoje é onde?</h1>
+            </footer>
+        </div >
     )
 }

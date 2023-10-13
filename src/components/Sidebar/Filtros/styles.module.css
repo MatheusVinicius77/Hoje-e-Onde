@@ -3,8 +3,6 @@
     width: 72%;
     height: 1px;
     align-self: center;
-
-
     margin-bottom: 12px;
 }
 
@@ -17,7 +15,8 @@
 }
 
 .boxFiltro {
-    width: 95%;
+    width: 96%;
+    border-radius: 5px;
     padding-left: 8px;
     background-color: rgba(29, 32, 62, 1);
 }
