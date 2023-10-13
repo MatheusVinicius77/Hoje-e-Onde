@@ -9,7 +9,9 @@
 }
 
 .filtroDistancia {
-    gap: 2px;
+    gap: 5px;
+    margin: 10px 0px 10px 0px;
+
 }
 
 .filtros {
@@ -20,4 +22,17 @@
     width: 95%;
     padding-left: 8px;
     background-color: rgba(29, 32, 62, 1);
+}
+
+div.multi-range-slider .thumb:before {
+    background: linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
+}
+
+.thumb {
+    background-color: white;
+    background: linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
+
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
 }
