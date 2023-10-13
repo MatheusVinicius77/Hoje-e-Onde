@@ -1,0 +1,23 @@
+.finalizar {
+    border: 1px solid black;
+    width: 72%;
+    height: 1px;
+    align-self: center;
+
+
+    margin-bottom: 12px;
+}
+
+.filtroDistancia {
+    gap: 2px;
+}
+
+.filtros {
+    margin: 0px 40px 24px;
+}
+
+.boxFiltro {
+    width: 95%;
+    padding-left: 8px;
+    background-color: rgba(29, 32, 62, 1);
+}
