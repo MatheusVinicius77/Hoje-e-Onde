@@ -1,18 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Categoria from './Categorias'
 import styles from './styles.module.css'
 export default function Filtros() {
-
-    const [buttonPressed, setButtonPressed] = useState(false);
-
-    function handleButtonState(element) {
-        if (buttonPressed) {
-            setButtonPressed(false)
-        } else {
-            setButtonPressed(true)
-        }
-    }
-
     return (
         <div className={`bg-brand-2 ${styles.boxFiltro}`}>
 
