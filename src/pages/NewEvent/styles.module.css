@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    max-width: 1280px;
+    background-color: rgba(29, 32, 62, 1);
+}
+
+.sidebar {
+    width: 30%;
+}
+
+.content {
+    width: 70%;
+    padding: 37px 147px 37px 0px;
+}
+
+.figures {
+    text-align: center;
+    width: 465px;
+    height: 112px;
+    background-color: rgba(217, 217, 217, 1);
+    padding: 25px;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.label {
+    color: rgba(0, 0, 0, 0.5);
+}
