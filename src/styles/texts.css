@@ -41,12 +41,27 @@
     color: var(--white-secondary);
 }
 
+.text-7 {
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--weight-3);
+}
+
 /* Eventos verificados e Próximos a você */
 .title-1 {
     font-family: var(--font-family-2);
     font-size: var(--font-size-1);
     color: var(--white);
 }
+
+
+/* ENTRAR/LOGIN/CRIAR CONTA */
+.title-2 {
+    font-family: var(--font-family-5);
+    font-size: var(--font-size-5);
+    color: var(--white);
+}
+
 
 .weight-1 {
     font-weight: var(--weight-1);
@@ -59,4 +74,3 @@
 .weight-3 {
     font-weight: var(--weight-3);
 }
-
