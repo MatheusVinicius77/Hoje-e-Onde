@@ -1,0 +1,17 @@
+input::placeholder{
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--weight-3);
+    
+}
+
+.input{
+    height: 30px;
+    width: 215px;
+    max-width: 215px;
+
+}
+
+.span{
+    max-width: 45px;
+}
