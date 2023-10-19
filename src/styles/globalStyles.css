@@ -3,7 +3,7 @@
     --blue-light: #393D5E;
     --white: #FFFFFF;
     --white-secondary: rgba(255, 255, 255, 0.55);
-    opacity: 55%;
+    --opacity: 55%;
     --gradiente: linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
     --color-brand-0: rgba(57, 61, 94, 1);
     --color-brand-1: rgba(29, 32, 62, 1);
