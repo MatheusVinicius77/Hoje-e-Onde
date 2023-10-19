@@ -1,0 +1,12 @@
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    row-gap: 8px;
+
+}
+
+.figure img {
+    width: 60px;
+}
