@@ -16,3 +16,8 @@
     height: 100%;
     background-color: brown;
 }
+
+.a .custom-dropdown-menu .dropdown-menu {
+    background: transparent;
+    /* Define o fundo como transparente */
+}
