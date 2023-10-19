@@ -7,10 +7,15 @@ import search from '../../assets/icons/Search.svg'
 import user1 from '../../assets/userIcons/user1.svg'
 import styles from './styles.module.css'
 import Filtros from './Filtros'
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
+
 import logo from '../../assets/icons/Logo.svg'
 import hamburguer from '../../assets/icons/hamburguer.svg'
 import sliders from '../../assets/icons/sliders.svg'
 import discover2 from '../../assets/icons/discover2.svg'
+import { FormLabel } from 'react-bootstrap'
 
 
 export default function Sidebar() {
@@ -21,11 +26,11 @@ export default function Sidebar() {
         let sidebar = document.getElementById('sidebar')
         if (btnPressed) {
             sidebar = document.getElementById('sidebar')
-            if (larguraTela <= 500) {
-                sidebar.classList.remove(`${styles.responsiveSidebar}`)
-                sidebar.classList.add(`${styles.sidebar}`)
-                sidebar.style.width = '250px'
-            }
+            // if (larguraTela <= 715) {
+            sidebar.classList.remove(`${styles.responsiveSidebar}`)
+            sidebar.classList.add(`${styles.sidebar}`)
+            //     sidebar.style.width = '250px'
+            // }
             sidebar.style.width = '250px'
 
             setBtnPressed(false)
@@ -42,10 +47,10 @@ export default function Sidebar() {
     const logWindowWidth = () => {
         setLarguraTela(window.innerWidth)
         console.log(`Largura da tela: ${window.innerWidth}px`);
-        if (window.innerWidth <= 500) {
-            HandleClick()
-            console.log(btnPressed)
-        }
+        // if (window.innerWidth <= 715) {
+        //     HandleClick()
+        //     console.log(btnPressed)
+        // }
     };
 
     useEffect(() => {
@@ -74,14 +79,17 @@ export default function Sidebar() {
             </div>
             <div id='formSearchResponsive' className={(btnPressed) ? `flex column ${styles.formSearchResponsive}` : `flex column ${styles.formSearch}`}>
                 {(btnPressed) ? < SidebarButton onClick={HandleClick} imgWidth={'50px'} id={'2'} icone={search} /> :
-                    <form className={`form-inline`}>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <button className={`${styles.buttonSearch} transparent `}><span className={`transparent input-group-text border-right-0 rounded-0`} id="basic-addon1"><img src={search} alt="" /></span></button>
-                            </div>
-                            <input className={`transparent ${styles.inputSearch} weight-1 border-left-0 form-control rounded-0 `} type="text" placeholder="Pesquisar" aria-label="Pesquisa" aria-describedby="basic-addon1" />
-                        </div>
-                    </form>
+                    <InputGroup style={{ height: 'fit-content', width: '95%' }} className={`mb-3`}>
+                        <Button variant="outline-secondary" id="button-addon1">
+                            <img src={search} alt="" />
+                        </Button>
+                        
+                        <Form.Control  placeholder='Pesquisar' style={{ width: '5px', backgroundColor: 'white' }}
+                            aria-label="Example text with button addon "
+                            aria-describedby="basic-addon1"
+
+                        />
+                    </InputGroup>
                 }
                 {(btnPressed) ?
                     <nav onClick={HandleClick} className={(btnPressed) ? ` flex column ${styles.navResponsive}` : `${styles.nav}`} >

@@ -2,6 +2,7 @@
     width: 250px;
     max-height: 844px;
     border-bottom-left-radius: 20px;
+    z-index: 1;
 
 }
 
@@ -97,7 +98,7 @@ input::placeholder {
 }
 
 .footer {
-    height: 72px;
+    height: fit-content;
     background-color: rgba(29, 32, 62, 1);
     width: 100%;
     border-bottom-left-radius: 20px;
@@ -113,6 +114,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .userInfoResponsive {
@@ -179,7 +181,7 @@ input::placeholder {
 }
 
 .campoFiltros {
-    margin-bottom: 79%;
+    margin-bottom: 45%;
     border-radius: 5px;
 }
 
@@ -193,32 +195,11 @@ input::placeholder {
 }
 
 
-@media (max-width: 500px) {
-
-
-
-    .responsiveSidebar {
-        height: 0;
-        background-color: transparent;
-
-    }
-
-    .formSearchResponsive {
-        display: none;
-    }
-
-    .responsiveFooter {
-        display: none;
-    }
-
+@media (max-width: 700px) {
     .userInfoResponsive {
         width: min-content;
         height: fit-content;
         background-color: rgba(29, 32, 62, 1);
-    }
-
-    .userInfoResponsive figure {
-        display: none;
     }
 
     .btnHamburguer {
