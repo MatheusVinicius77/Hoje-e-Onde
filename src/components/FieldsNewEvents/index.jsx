@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from './styles.module.css'
-export default function Field({ width = '465px', height = '0', type, text, id, fontSize = '17px', }) {
+export default function Field({ className, width = '465px', height = '0', type, text, id, fontSize = '17px', }) {
   useEffect(() => {
     let field = document.getElementById(id)
     field.style.width = width
@@ -9,7 +9,7 @@ export default function Field({ width = '465px', height = '0', type, text, id, f
   }, []);
 
   return (
-    <div>
+    <div className={className} >
       <input id={id} name={id} required placeholder={text} className={`${styles.fields}`} type={type} accept="image/*" />
     </div>
 
