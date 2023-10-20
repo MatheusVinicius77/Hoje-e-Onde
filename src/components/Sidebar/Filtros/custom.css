@@ -1,0 +1,18 @@
+.multi-range-slider * {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.multi-range-slider {
+    border: none;
+    padding: 0px;
+    min-width: 60%;
+    max-width: 75%;
+    height: 100%;
+    flex-grow: 2;
+}
+
+.multi-range-slider .thumb::before {
+    background: linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
+}

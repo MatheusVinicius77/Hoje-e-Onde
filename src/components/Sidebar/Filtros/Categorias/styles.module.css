@@ -1,0 +1,20 @@
+.square {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(135, 135, 135, 1);
+
+}
+
+.squareBlack {
+    width: 14px;
+    height: 14px;
+}
+
+.categorias {
+    gap: 5px;
+
+}
+
+.buttonCategorias {
+    align-self: baseline;
+}
