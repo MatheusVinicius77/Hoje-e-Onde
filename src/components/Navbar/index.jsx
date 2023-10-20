@@ -14,7 +14,7 @@ import newEvent from '../../assets/icons/new-event.svg'
 import Filtros from '../Sidebar/Filtros';
 import logoUser from '../../assets/userIcons/user1.svg'
 import styles from './styles.module.css'
-
+import './bg.css'
 
 export default function Navb() {
     return (
@@ -42,7 +42,7 @@ export default function Navb() {
                             <Button variant="outline-success"><img src={search} alt="" /></Button>
                         </Form>
                         <NavDropdown title="Filtrar" id="collasible-nav-dropdown">
-                            <div className={``}>
+                            <div >
                                 <Filtros></Filtros>
                             </div>
                         </NavDropdown>
