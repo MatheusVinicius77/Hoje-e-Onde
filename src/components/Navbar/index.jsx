@@ -41,7 +41,7 @@ export default function Navb() {
                             />
                             <Button variant="outline-success"><img src={search} alt="" /></Button>
                         </Form>
-                        <NavDropdown className={`${styles.a}`} title="Filtrar" id="collasible-nav-dropdown">
+                        <NavDropdown title="Filtrar" id="collasible-nav-dropdown">
                             <div >
                                 <Filtros></Filtros>
                             </div>
