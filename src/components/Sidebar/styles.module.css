@@ -119,6 +119,7 @@ input::placeholder {
 
 .userInfoResponsive {
     border-bottom: 2px solid black;
+    background-color: rgba(29, 32, 62, 1);
 }
 
 .userInfoResponsive img {
@@ -197,9 +198,10 @@ input::placeholder {
 
 @media (max-width: 700px) {
     .userInfoResponsive {
-        width: min-content;
+        width: 100%;
         height: fit-content;
         background-color: rgba(29, 32, 62, 1);
+        padding: 7px;
     }
 
     .btnHamburguer {
