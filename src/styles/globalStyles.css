@@ -7,7 +7,7 @@
     --gradiente: linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
     --color-brand-0: rgba(57, 61, 94, 1);
     --color-brand-1: rgba(29, 32, 62, 1);
-    --color-brand-2:rgba(0, 0, 0, 0.5);
+    --color-brand-2: rgba(0, 0, 0, 0.5);
     /* FONTE DA FORMA DOS EVENTOS VERIFICADOS */
     --font-family-1: 'Actor', sans-serif;
 
@@ -29,6 +29,7 @@
     --font-size-3: 16px;
     --font-size-4: 8px;
     --font-size-5: 32px;
+    --font-size-6: 12px;
 
 
     --weight-1: 100;

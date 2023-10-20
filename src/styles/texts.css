@@ -37,8 +37,9 @@
 /* KILOMETRAGEM DISTANCIA */
 .text-6 {
     font-family: var(--font-family-3);
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-6);
     color: var(--white-secondary);
+    font-weight: var(--weight-3);
 }
 
 .text-7 {
