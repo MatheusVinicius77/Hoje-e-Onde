@@ -1,0 +1,285 @@
+.container {
+    display: flex;
+    width: 100%;
+    background-color: rgba(29, 32, 62, 1);
+    max-height: fit-content;
+    min-height: 100vh;
+}
+
+.sidebar {
+    max-width: fit-content;
+    z-index: 1;
+}
+
+.content {
+    padding-top: 1vw;
+    width: 100%;
+}
+
+.content form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 25px;
+}
+
+.figures {
+    text-align: center;
+    width: 45vw;
+    min-width: 60%;
+    background-color: rgba(217, 217, 217, 1);
+    padding: 25px;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin-bottom: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.fieldOut {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    min-width: 45vw;
+    max-width: 60%;
+}
+
+.dateContainer {
+    min-width: 45vw;
+    max-width: 60%;
+    align-self: center;
+    gap: 2%;
+}
+
+.firstDate {
+    width: 100%;
+}
+
+
+
+.address {
+    align-self: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-width: 45vw;
+    max-width: 50%;
+
+}
+
+.address2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navB {
+    display: none;
+}
+
+.categoryBox {
+    border-radius: 5px;
+    max-width: 100%;
+    background-color: rgba(217, 217, 217, 1);
+    padding: 7px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.categoryBox div {
+    gap: 5px;
+}
+
+.teste {
+    width: 100%;
+}
+
+
+.categoryContainer {
+    min-width: 45vw;
+    max-width: 60%;
+    align-self: center;
+    height: fit-content;
+}
+
+.div2 {
+    gap: 10%;
+}
+
+
+@media screen and (max-width: 760px) {
+    .content {
+        row-gap: 0.6vw;
+    }
+
+    /* Estilos aplicados apenas em dispositivos de tela com largura máxima de 768px */
+    .figures {
+        width: 60vw;
+        align-self: center;
+    }
+
+    .fieldOut {
+        width: 60vw;
+    }
+
+    .dateContainer {
+        flex-direction: column;
+        width: 60vw;
+        align-items: start;
+
+    }
+
+    .address {
+        display: flex;
+        width: 60vw;
+    }
+
+    .inputAddres {
+        width: 30vw;
+    }
+
+    .categoryContainer {
+        width: 100%;
+        padding: 5px;
+        height: min-content;
+
+    }
+
+    .categoryContainer h1 {
+        text-align: center;
+
+    }
+
+
+
+}
+
+@media (max-width: 660px) {
+    .navB {
+        position: fixed;
+        transition: width 0.3s;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .address {
+        max-width: 100%;
+    }
+
+    .dateContainer div input {
+        min-width: 100%;
+
+    }
+
+    .div2 {
+        gap: 22%;
+        width: 45%;
+    }
+
+    .div2 input {
+        width: 5px;
+    }
+
+
+    .dateContainer {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .figures {
+        padding: 4vw;
+    }
+
+    .figures input {
+        font-size: 2.5vw;
+    }
+
+    .responsiveSidebar {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        max-height: max-content;
+        flex-direction: column;
+
+    }
+
+    .content {
+        background-color: rgb(17, 11, 11);
+        margin-top: 65px;
+        row-gap: 5vw;
+        display: flex;
+
+    }
+
+
+
+    .categoryContainer {
+        max-width: 100vw;
+        height: 30vh;
+        /* /max-width: 100%; */
+
+    }
+
+    .categoryBox {
+
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+
+    .categoryBox div {
+        width: 30%;
+        gap: 8px;
+        align-items: center;
+    }
+
+}
+
+/* @media (max-width: 1200px) {
+    .figures {
+        width: 60vw;
+    }
+
+    .fieldOut {
+        background-color: red;
+        width: 100%;
+    }
+
+    .dateContainer {
+        background-color: aqua;
+        flex-direction: column;
+        width: 60vw;
+        align-self: center;
+    }
+
+    .firstDate {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: red;
+
+    }
+
+
+
+
+} */
