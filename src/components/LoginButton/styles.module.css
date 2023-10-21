@@ -1,18 +1,17 @@
-button::placeholder{
+button::placeholder {
     font-family: var(--font-family-2);
     font-size: var(--font-size-3);
     font-weight: var(--weight-3);
-    
+
 }
 
 .customButton {
-    background-color: #1D203E; 
-    color: #fffbfb; 
+    background-color: #1D203E;
+    color: #fffbfb;
     font-family: var(--font-family-2);
     font-size: var(--font-size-3);
     font-weight: var(--weight-3);
     width: 213px;
-    max-width: 213px;
     height: 25px;
     top: 556px;
     left: 767px;
@@ -20,4 +19,4 @@ button::placeholder{
     gap: 10px;
     font-size: 16px;
 
-  }
+}
