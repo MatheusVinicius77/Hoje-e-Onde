@@ -43,6 +43,25 @@ export default function Login() {
                     <p className={styles.p2}>Não tem uma conta? <a href="">clique aqui</a></p>
                 </div>
             </div>
+            <div className={`${styles.responsiveContainer}`}>
+                <div className={`${styles.description}`}>
+                    <img src={logoProjeto} alt="" srcset="" />
+                    <h1 className='title-2'>HOJE É ONDE?</h1>
+                    <div className={`${styles.login}`}>
+                        <h1 className='title-2'>Entrar</h1>
+                        <form className={`${styles.formAuth}`} action="#">
+                            <Input className={styles.input} placeholder={'Email'} type={'email'} img={email} ></Input>
+                            <Input className={styles.input} placeholder={'Senha'} type={'password'} img={password} ></Input>
+                            <div className={`${styles.lembrarConta}`}>
+                                <button onClick={handleButtonState} className='transparent' type="button"><img className='white' src={(buttonPressed) ? squareCheck : squareRegular} alt="" srcset="" /></button>
+                                <p className="text-7 white-text-color"> lembrar da minha conta</p>
+                            </div>
+                            <Button style={{ width: '100%', height: '4vh' }} placeholder={'Entrar'}></Button>
+                        </form>
+                        <p className={styles.p2}>Não tem uma conta? <a href="">clique aqui</a></p>
+                    </div>
+                </div>
+            </div>
         </div >
     )
 }

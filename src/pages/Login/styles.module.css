@@ -105,3 +105,70 @@
 .lembrarConta button:focus {
     outline: none;
 }
+
+.responsiveContainer {
+    display: block;
+    text-align: center;
+    height: 100%;
+    display: none;
+}
+
+
+@media screen and (max-width: 550px) {
+    .container {
+        padding: 0;
+        background-image: url('../../assets//bgAuth.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+
+    }
+
+    .containerAuth {
+        display: none;
+    }
+
+    .responsiveContainer {
+        display: block;
+        text-align: center;
+        height: 100%;
+
+    }
+
+    .description {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        row-gap: 10vh;
+        padding: 6vh;
+
+    }
+
+    .formAuth {
+        margin-bottom: 7vh;
+        width: 65vw;
+    }
+
+    .formAuth input {
+        max-width: 100%;
+    }
+
+
+    .login {
+        background-color: transparent;
+        width: 100%;
+
+    }
+
+    .lembrarConta p {
+        font-size: 4vw;
+    }
+
+    .lembrarConta button img {
+        height: 100%;
+        width: 30px;
+    }
+
+}
