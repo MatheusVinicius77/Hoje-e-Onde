@@ -80,11 +80,11 @@ export default function Sidebar() {
             <div id='formSearchResponsive' className={(btnPressed) ? `flex column ${styles.formSearchResponsive}` : `flex column ${styles.formSearch}`}>
                 {(btnPressed) ? < SidebarButton onClick={HandleClick} imgWidth={'50px'} id={'2'} icone={search} /> :
                     <InputGroup style={{ height: 'fit-content', width: '95%' }} className={`mb-3`}>
-                        <Button variant="outline-secondary" id="button-addon1">
+                        <Button style={{ borderRadius: '0', borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }} variant="outline-secondary" id="button-addon1">
                             <img src={search} alt="" />
                         </Button>
-                        
-                        <Form.Control  placeholder='Pesquisar' style={{ width: '5px', backgroundColor: 'white' }}
+
+                        <Form.Control placeholder='Pesquisar' style={{ width: '5px', backgroundColor: 'white' }}
                             aria-label="Example text with button addon "
                             aria-describedby="basic-addon1"
 
