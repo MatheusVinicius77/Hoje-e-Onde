@@ -2,7 +2,8 @@
     display: flex;
     width: 100%;
     background-color: rgba(29, 32, 62, 1);
-    max-height: 844px;
+    max-height: fit-content;
+    min-height: 100vh;
 }
 
 .sidebar {
