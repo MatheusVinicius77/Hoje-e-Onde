@@ -11,19 +11,18 @@ export default function FormaR({ icone, titulo }) {
                 <figure>
                     <img src={icone} alt="" srcset="" />
                 </figure>
-                <h1 className='text-2'>{titulo}</h1>
+                <h1 className='text-1 weight-1'>{titulo}</h1>
             </div>
-            <div className={`flex  text-6 ${styles.container2}`}>
-                <p>10:15hrs</p>
-                <p>1Km</p>
+            <div className={`flex text-6 ${styles.container2}`}>
+                <p className="text-6">10:15hrs</p>
+                <p className="text-6">1Km</p>
             </div>
 
             <div className={`flex text-6 ${styles.container3}`}>
                 <button><img src={favorito} alt="" /></button>
-                <p>2 Membros</p>
+                <p className="text-7">2 Membros</p>
                 <button><img src={share} alt="" /></button>
                 <button><img src={save} alt="" /></button>
-
             </div>
         </div>
     )

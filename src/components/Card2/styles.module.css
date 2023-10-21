@@ -1,0 +1,16 @@
+.card {
+    position: absolute;
+    border-radius: 5px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: fit-content;
+    min-height: 37vh;
+    min-width: 20%;
+    position: relative;
+    display: flex;
+}
+
+.legenda {
+    align-self: end;
+    min-width: 100%;
+}
