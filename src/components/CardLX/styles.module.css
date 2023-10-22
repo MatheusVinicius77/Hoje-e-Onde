@@ -1,5 +1,5 @@
 .banner-card{
-    width: 500px;height: 200px;
+    width: 500px;height: 260px;
     border-radius: 0.5rem;
     display: flex;
     align-items: flex-end;
@@ -12,7 +12,7 @@
 .banner-card:hover{
     position: relative;
     z-index: 2;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.5s ease-in-out;
     box-shadow: 0px 10px 20px 0px var(--blue);
 }
