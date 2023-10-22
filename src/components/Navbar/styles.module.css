@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     row-gap: 8px;
-
+    text-align: center;
 }
 
 .figure img {
-    width: 60px;
+    width: 28%;
+
 }
 
 .filtros {

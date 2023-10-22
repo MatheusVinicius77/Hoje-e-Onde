@@ -32,6 +32,11 @@ export default function Navb() {
                         <Nav.Link href="#features"><SidebarButton imgWidth={'30px'} id={'2'} icone={discover2} texto={'Inicio'} /></Nav.Link>
                         <Nav.Link href="#features"><SidebarButton imgWidth={'30px'} id={'3'} icone={favorito} texto={'Favoritos'} /></Nav.Link>
                         <Nav.Link href="#features"><SidebarButton imgWidth={'30px'} id={'4'} icone={newEvent} texto={'Novo Evento'} /></Nav.Link>
+                        <NavDropdown title="Filtrar" id="collasible-nav-dropdown">
+                            <div >
+                                <Filtros></Filtros>
+                            </div>
+                        </NavDropdown>
                         <Form className="d-flex">
                             <Form.Control
                                 type="search"
@@ -41,11 +46,7 @@ export default function Navb() {
                             />
                             <Button variant="outline-success"><img src={search} alt="" /></Button>
                         </Form>
-                        <NavDropdown title="Filtrar" id="collasible-nav-dropdown">
-                            <div >
-                                <Filtros></Filtros>
-                            </div>
-                        </NavDropdown>
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>

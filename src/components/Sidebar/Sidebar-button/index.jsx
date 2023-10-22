@@ -9,7 +9,7 @@ export default function SidebarButton({ onClick, btnWidth, imgColor, btnHeigth, 
     if (texto == 'Inicio') {
         url = '/home'
     } else if (texto == 'Favoritos') {
-        url = '/'
+        url = '/favoritos'
     } else if (texto == 'Novo Evento') {
         url = '/newevent'
     }

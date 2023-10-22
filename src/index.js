@@ -10,6 +10,7 @@ import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import Favoritos from './pages/Favorites';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: '/cadastro',
     element: <Cadastro />
+  },
+  {
+    path: '/favoritos',
+    element: <Favoritos />
   }
 
 ])
