@@ -10,17 +10,21 @@
     resize: both;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.50);
     display: flex;
-    align-items: end;
+    align-items: flex-end;
+    flex-wrap: wrap;
     border-radius: 1.25rem;
 }
 .content-card:hover{
     position: relative;
-    z-index: 2;
+    z-index: 1;
     transform: scale(1.1);
     transition: 0.5s ease-in-out;
     box-shadow: 0px 10px 20px 0px var(--pink);
 }
-
+.playbt{
+    height: 47%;
+    width: 100%;
+}
 .image-card {
     height: 53%;
     width: 100%;

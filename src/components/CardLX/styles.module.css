@@ -3,18 +3,21 @@
     border-radius: 0.5rem;
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     resize: both;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.50);
 }
-
 .banner-card:hover{
     position: relative;
     z-index: 2;
     transform: scale(1.1);
     transition: 0.5s ease-in-out;
     box-shadow: 0px 10px 20px 0px var(--blue);
+}
+.playbt{
+    width: 100%; height: 80%;
 }
 .banner-card section{
     display: flex;
