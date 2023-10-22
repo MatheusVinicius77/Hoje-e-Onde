@@ -8,10 +8,5 @@ export default function Field({ width = '465px', height = '0', type, text, id, f
     field.style.fontSize = fontSize
   }, []);
 
-  return (
-    <div>
-      <input id={id} name={id} required placeholder={text} className={`${styles.fields}`} type={type} accept="image/*" />
-    </div>
-
-  );
+  return <input id={id} name={id} required placeholder={text} className={`${styles.fields}`} type={type} accept="image/*" />
 }
