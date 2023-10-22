@@ -4,6 +4,8 @@ import Sidebar from '../../components/Sidebar/index'
 import Field from '../../components/FieldsNewEvents/index'
 import EventCategory from '../../components/EventsCategorys/index'
 import Navbar from '../../components/Navbar/index'
+import Button from '../../components/LoginButton'
+import { placeholder } from '@babel/types'
 export default function NewEventPage() {
     console.log(window.innerWidth)
     return (
@@ -81,8 +83,11 @@ export default function NewEventPage() {
                             </div>
                         </div>
                     </div>
+                    <div className={`${styles.sendButton}`}>
+                        <Button className='' style={{ backgroundColor: 'rgba(57, 61, 94, 1)', width: '100%', height: '5vh' }} placeholder={'Enviar'}></Button>
+                    </div>
                 </form>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
