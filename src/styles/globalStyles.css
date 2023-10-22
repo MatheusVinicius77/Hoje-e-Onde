@@ -5,8 +5,8 @@
     --white-secondary: rgba(255, 255, 255, 0.55);
     --opacity: 70%;
     --gradiente: linear-gradient(180deg, rgb(167, 62, 231) 0%, #00EBFF 100%);
-    --pink : rgb(167, 62, 231);
-    --blue:rgb(0, 235, 255);
+    --pink: rgb(167, 62, 231);
+    --blue: rgb(0, 235, 255);
     --color-brand-0: rgba(57, 61, 94, 1);
     --color-brand-1: rgba(29, 32, 62, 1);
     --color-brand-2: rgba(0, 0, 0, 0.5);
@@ -46,4 +46,23 @@
 
 
 
+}
+
+
+
+.cardPequeno .swiper-wrapper {
+    min-width: max-content;
+    gap: 0px;
+}
+
+@media screen and (max-width: 1100px) {
+    .cardMedio .swiper-wrapper {
+        min-width: max-content;
+        gap: 35px;
+    }
+
+    .cardPequeno .swiper-wrapper {
+        min-width: max-content;
+        gap: 50px;
+    }
 }

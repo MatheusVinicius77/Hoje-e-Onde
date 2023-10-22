@@ -23,6 +23,7 @@
 
 .title {
     justify-self: start;
+
 }
 
 
@@ -50,6 +51,8 @@
     margin-top: 15px;
 }
 
+
+
 @media (max-width: 660px) {
     .navB {
         position: fixed;
@@ -60,9 +63,13 @@
         z-index: 9999;
     }
 
-    .carrosel:nth-child(3) {
+
+
+    .carrosel:nth-child(3) .swiper-wrapper {
         display: flex;
-        gap: 30px;
+        gap: 150px;
+        background-color: aqua;
+
     }
 
     .responsiveSidebar {

@@ -29,3 +29,8 @@
 .bg-brand-2 {
     background-color: var(--color-brand-1);
 }
+
+.swiper-wrapper:nth-child(3) {
+    display: flex;
+    gap: 35vw;
+}
