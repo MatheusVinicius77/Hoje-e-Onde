@@ -1,34 +1,40 @@
 .container {
-    background-color: rgba(57, 61, 94, 1);
-    width: 100%;
-    border-radius: 20px;
+    display: grid;
+    background-color: var(--blue-light);
+    padding-left: 0.5rem;padding-right: 0.5rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 12rem;height: 6rem;
     font-weight: 400;
 }
 
 button {
     background-color: transparent;
+    display: flex;align-items: center;
 }
-
+button p{margin: 0;margin-left: 2px;color: rgba(255, 255, 255, 0.25);}
 button:focus {
     outline: none;
 }
-
-.container0 {
-    gap: 10px;
+.container0{
+    display: flex;align-items: center;
 }
-
-.container0 img {
-    width: 35px;
+.figure{margin-top: -15px;}
+.figure img {
+    width: 1.7rem;height: 1.7rem;
+    margin-right: 2px;
+    position: relative;
+    border-radius: 100rem;
 }
 
 .container0 h1 {
     font-family: var(--font-family-2);
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .container2 {
     color: rgba(255, 255, 255, 0.25);
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .container2 p {
@@ -37,16 +43,14 @@ button:focus {
 }
 
 .container3 {
-    color: rgba(255, 255, 255, 0.25);
-    justify-content: center;
-    padding: 0px 12px 0px 12px;
-    align-items: flex-start;
-    font-size: 14px;
-    gap: 10px;
+    display: flex;
+    justify-content: space-between;align-items: center;
+    font-size: 8px;
 }
-
-
-.container3 p {
-    flex-grow: 1;
-    font-weight: bold;
+.container div{display: flex;align-items: center;}
+.container3 p{font-size: 8px;}
+.container3  img{
+    width: 1rem;
+    height:1rem;
+    margin-left: 2px;
 }
