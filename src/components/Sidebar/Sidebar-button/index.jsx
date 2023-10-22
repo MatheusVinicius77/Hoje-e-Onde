@@ -16,7 +16,7 @@ export default function SidebarButton({ onClick, btnWidth, imgColor, btnHeigth, 
 
 
     return (
-        <Link to={url}>
+        <Link className={styles.teste} to={url}>
             <button onClick={onClick} style={{ width: btnWidth, color: imgColor, height: btnHeigth, color: btnColor }} className={`flex transparent ${styles.button}`} type="button">
                 <img style={{ width: imgWidth, height: imgHeight }} src={icone} alt="" />
                 <h1 id={texto} style={{ fontSize: fntSize }} className='text-5 weight-3'>{texto}</h1>

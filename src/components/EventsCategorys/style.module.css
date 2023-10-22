@@ -4,6 +4,8 @@
     width: 68px;
     height: 16px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .btnPressed {

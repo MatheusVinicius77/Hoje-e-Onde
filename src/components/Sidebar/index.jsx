@@ -10,12 +10,12 @@ import Filtros from './Filtros'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-
 import logo from '../../assets/icons/Logo.svg'
 import hamburguer from '../../assets/icons/hamburguer.svg'
 import sliders from '../../assets/icons/sliders.svg'
 import discover2 from '../../assets/icons/discover2.svg'
 import { FormLabel } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 
 export default function Sidebar() {

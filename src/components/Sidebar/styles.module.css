@@ -3,9 +3,7 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: space-between;
-
+    height: 100%;
 }
 
 
@@ -105,6 +103,8 @@ input::placeholder {
     width: 100%;
     gap: 12px;
     padding: 10px;
+    justify-self: flex-start;
+    margin-top: 100%;
 }
 
 .responsiveSidebar {

@@ -6,6 +6,8 @@ button::placeholder {
 }
 
 .customButton {
+    display: flex;
+    justify-content: center;
     background-color: #1D203E;
     color: #fffbfb;
     font-family: var(--font-family-2);

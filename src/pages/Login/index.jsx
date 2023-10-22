@@ -41,7 +41,7 @@ export default function Login() {
                             <button onClick={handleButtonState} className='transparent' type="button"><img className='white' src={(buttonPressed) ? squareCheck : squareRegular} alt="" srcset="" /></button>
                             <p className="text-7 white-text-color"> lembrar da minha conta</p>
                         </div>
-                        <Button onClick={handleContact} className={styles.dale} style={{ width: '100%', height: '4vh' }} placeholder={'Entrar'}></Button>
+                        <Button onClick={handleContact} className={styles.dale}  style={{ textAlign: 'center', width: '100%', height: '4vh' }} placeholder={'Entrar'}></Button>
                     </form>
                 </div>
                 <div className={`${styles.asideContent}`}>
