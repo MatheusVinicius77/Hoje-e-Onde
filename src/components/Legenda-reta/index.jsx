@@ -8,8 +8,8 @@ export default function FormaR({ icone, titulo }) {
     return (
         <div className={`flex column ${styles.container}`}>
             <div className={`flex ${styles.container0}`}>
-                <figure>
-                    <img src={icone} alt="" srcset="" />
+                <figure className={styles.figure}>
+                <img src={icone} alt="" srcset="" />
                 </figure>
                 <h1 className='text-1 weight-1'>{titulo}</h1>
             </div>
@@ -19,10 +19,15 @@ export default function FormaR({ icone, titulo }) {
             </div>
 
             <div className={`flex text-6 ${styles.container3}`}>
-                <button><img src={favorito} alt="" /></button>
-                <p className="text-7">2 Membros</p>
-                <button><img src={share} alt="" /></button>
-                <button><img src={save} alt="" /></button>
+                <button>
+                    <img src={favorito} alt="" />
+                    <p className="text-7">2 Membros</p>
+                </button>
+                
+                <div>
+                    <button><img src={share} alt="" /></button>
+                    <button><img src={save} alt="" /></button>
+                </div>
             </div>
         </div>
     )
