@@ -1,8 +1,8 @@
 import React from 'react';
-import Homepage from './pages/Homepage/index'
+import Favoritos from './pages/Favorites/index'
 function App() {
   return(
-    <Homepage/>
+    <Favoritos/>
   );
 }
 
