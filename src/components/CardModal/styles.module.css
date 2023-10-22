@@ -1,0 +1,48 @@
+.Card_modal{
+    width: 100%;height: 37.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--white);
+    font-family: var(--font-family-2);
+    
+}
+.Card_modal_banner{
+    width: 100%;height: 55%;
+    
+}
+.Card_modal_banner img{width: 100%;height: 100%;}
+
+.Card_modal_content{
+    margin-top: -8rem;
+    padding: 2rem;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(167, 62, 231) 0%, hsl(235, 36%, 18%,0.55) 100%);
+    backdrop-filter: blur(25px);
+}
+
+.content_linha1_icone{
+    height: 3.2rem;
+    width: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradiente);
+    border-radius: 100px;
+}
+.content_linha1_icone img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100px;
+}
+.content_linha1{width: 100%;display: flex;align-items: center;justify-content: flex-start;}
+.content_linha1 h2{font-size: 1.5rem;}
+
+.content_linha2{width: 100%;display: flex;align-items: center;justify-content: space-between;}
+
+.content_linha2 h1{font-size: 2.25rem;}
+.content_linha2 div{display: flex;align-items: center;justify-content: flex-start;gap: 4rem;}
+
+.content_linha3{width: 100%;height: 40%;background-color:rgba(255, 255, 255, 0.25);border-radius: 1.25rem;padding: 0.4rem;}
+.content_linha4{display: flex;width: 100%;gap: 2rem;margin-top: 2rem;}
+
