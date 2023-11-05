@@ -14,7 +14,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
 
 export default function Homepage() {
@@ -32,9 +32,13 @@ export default function Homepage() {
                     <Swiper className={`swiper_container ${styles.carrosel}`}
                         effect={'coverflow'}
                         grabCursor={true}
-                        slidesPerView={2}
-                        centeredSlides={true}
-                        spaceBetween={0}
+                        slidesPerView={1.4}
+                        spaceBetween={70}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        }}
+                        loop={true}
                         coverflowEffect={{
                             rotate: 0,
                             stretch: 0,
@@ -44,7 +48,7 @@ export default function Homepage() {
                         }}
 
 
-                        modules={[EffectCoverflow, Pagination]}
+                        modules={[Autoplay, EffectCoverflow, Pagination]}
                     >
                         <SwiperSlide>
                             <CardLx
