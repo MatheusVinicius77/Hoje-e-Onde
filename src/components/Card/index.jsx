@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import styles from "./styles.module.css";
 import navWave from '../../assets/icons/navWave.svg'
 import share from '../../assets/icons/share.svg'
@@ -9,7 +9,7 @@ import CardModal from "../CardModal";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export default function Card({fotoIcone, linkImagem, titulo, membros, distancia, hora }) {
+export default function Card({ fotoIcone, linkImagem, titulo, membros, distancia, hora }) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -17,12 +17,12 @@ export default function Card({fotoIcone, linkImagem, titulo, membros, distancia,
 
     return (
 
-        <div className={styles["content-card"]} style={{ backgroundImage: `url(${linkImagem})` }}>
-                {/* CONTENT BUTTON MODAL */}
-                <Button variant="" className={styles.playbt} onClick={handleShow}>
-                    
-                </Button>
-            <div className={styles["image-card"]} style={{ backgroundImage: `url(${navWave})` }}>
+        <div className={`${styles['content-card']}`} style={{ backgroundImage: `url(${linkImagem})` }}>
+            {/* CONTENT BUTTON MODAL */}
+            <Button variant="" className={styles.playbt} onClick={handleShow}>
+
+            </Button>
+            <div className={styles["image-card"]}>
 
                 {/* BARRA DE INFORMAÇÕES */}
                 <div className={styles["linha1"]}>
