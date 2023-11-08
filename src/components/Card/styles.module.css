@@ -3,10 +3,8 @@
 }
 
 .content-card {
-    width: 21rem;
-    /* width: 80%; */
-    height: 12rem;
-    /* height: 90%; */
+    width: 100%;
+    height: 13rem;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     resize: both;
@@ -14,6 +12,7 @@
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
+
     border-radius: 1.25rem;
 }
 
@@ -79,7 +78,7 @@
 
 .iconesTop {
     display: flex;
-    gap: 10px;
+    gap: 1vw;
 }
 
 .save,
@@ -97,6 +96,17 @@
 .linha2 {
     padding-left: 2rem;
     padding-right: 2rem;
+
+}
+
+.linha2 h6 {
+    font-size: 90%;
+}
+
+.linha3 p {
+    color: white;
+    white-space: nowrap;
+
 }
 
 .linha3 {
@@ -117,3 +127,29 @@
     height: 0.8rem;
     width: 0.8rem;
 }
+
+@media (max-width: 500px) {
+
+    .linha2 h6 {
+        font-size: 4.5vw;
+    }
+
+    .linha3 {
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    .linha3 p {
+        font-size: 3vw;
+        color: white;
+    }
+
+
+
+}
+
+/* @media (max-width: 460px) {
+    .content-card {
+        width: 20rem;
+    }
+} */

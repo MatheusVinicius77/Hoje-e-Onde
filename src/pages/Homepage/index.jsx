@@ -47,6 +47,11 @@ export default function Homepage() {
                             slideShadows: false,
                         }}
 
+                        breakpoints={{
+
+
+                        }}
+
 
                         modules={[Autoplay, EffectCoverflow, Pagination]}
                     >
@@ -84,11 +89,27 @@ export default function Homepage() {
                     { /* CARD MEDIO */}
                     <h1 className={`title-1 ${styles.title}`}>Eventos verificados</h1>
                     <Swiper className={`title-1 swiper_container ${styles.carrosel}`}
-                        slidesPerView={4}
-                        spaceBetween={0}
+                        slidesPerView={1.4}
+                        spaceBetween={'25vw'}
                         loop={true}
                         pagination={{
                             clickable: true,
+                        }}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1.8,
+                                spaceBetween: '15vw',
+                            },
+
+                            790: {
+                                slidesPerView: 2.5,
+                                spaceBetween: '15vw',
+                            },
+                            1030: {
+                                slidesPerView: 4,
+                                spaceBetween: '15vw',
+                            },
+
                         }}
                         navigation={true}
                         modules={[Navigation]}
@@ -116,7 +137,7 @@ export default function Homepage() {
                                 linkImagem="https://portal.ifpe.edu.br/afogados/wp-content/uploads/sites/10/2023/09/banner-site-padrao-1.png"
                                 titulo="Semana tecnologia IFPE"
                                 membros="110"
-                                distancia="100Km"
+                                distancia="100"
                                 hora="08:00" />
                         </SwiperSlide>
                         <SwiperSlide>
@@ -124,7 +145,7 @@ export default function Homepage() {
                                 linkImagem="https://www.olinda.pe.gov.br/wp-content/uploads/2023/02/olinda_carnaval_-680x363.jpg"
                                 titulo="Esquente carnaval"
                                 membros="2000"
-                                distancia="40Km"
+                                distancia="40"
                                 hora="15:00" />
                         </SwiperSlide>
 
@@ -160,59 +181,6 @@ export default function Homepage() {
                                 distancia="14"
                                 hora="23:15" />
                         </SwiperSlide>
-
-
-
-
-
-                        {/* <SwiperSlide>
-                            <Card fotoIcone="https://imageproxyb.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/ef2eb4eaae02699baa4fe420137b225ab326c7744e49cf85760c4107b6952d6c_1.jpg"
-                                linkImagem="https://noticias.maisesports.com.br/wp-content/uploads/2019/09/Campeonato-Brasileiro-League-of-Legends-LoL.jpg"
-                                titulo="Campeonato Lol"
-                                membros="1500"
-                                distancia="12"
-                                hora="12:00" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card fotoIcone="https://i.pinimg.com/550x/30/ff/ee/30ffeeece6b2e81936a54fc56c447649.jpg"
-                                linkImagem="https://www.agendartecultura.com.br/wp-content/uploads/2019/10/batalharap-CAPA.jpg"
-                                titulo="Batalha de Rap"
-                                membros="30"
-                                distancia="14"
-                                hora="23:15" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card fotoIcone="data:image/png;base64,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"
-                                linkImagem="https://portal.ifpe.edu.br/afogados/wp-content/uploads/sites/10/2023/09/banner-site-padrao-1.png"
-                                titulo="Semana tecnologia IFPE"
-                                membros="110"
-                                distancia="100Km"
-                                hora="08:00" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card fotoIcone="https://www.olinda.pe.gov.br/wp-content/uploads/2016/04/marca-prefeitura-de-olinda-google-amp-25042016-1.png"
-                                linkImagem="https://www.olinda.pe.gov.br/wp-content/uploads/2023/02/olinda_carnaval_-680x363.jpg"
-                                titulo="Esquente carnaval"
-                                membros="2000"
-                                distancia="40Km"
-                                hora="15:00" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card fotoIcone="https://www.olinda.pe.gov.br/wp-content/uploads/2016/04/marca-prefeitura-de-olinda-google-amp-25042016-1.png"
-                                linkImagem="https://www.olinda.pe.gov.br/wp-content/uploads/2023/02/olinda_carnaval_-680x363.jpg"
-                                titulo="Esquente carnaval"
-                                membros="2000"
-                                distancia="40Km"
-                                hora="15:00" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card fotoIcone="https://www.olinda.pe.gov.br/wp-content/uploads/2016/04/marca-prefeitura-de-olinda-google-amp-25042016-1.png"
-                                linkImagem="https://www.olinda.pe.gov.br/wp-content/uploads/2023/02/olinda_carnaval_-680x363.jpg"
-                                titulo="Esquente carnaval"
-                                membros="2000"
-                                distancia="40Km"
-                                hora="15:00" />
-                        </SwiperSlide> */}
                     </Swiper>
                 </div>
 
@@ -220,9 +188,14 @@ export default function Homepage() {
                 <div className='cardPequeno'>
                     <h1 className={`title-1 ${styles.title}`}>Próximos a você</h1>
                     <Swiper className={`swiper_container ${styles.carrosel}`}
-                        grabCursor={true}
-                        slidesPerView={7}
-                        spaceBetween={100}
+                        slidesPerView={4}
+                        spaceBetween={0}
+                        loop={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Navigation]}
                     >
                         <SwiperSlide>
                             <Card2
