@@ -54,15 +54,3 @@
     min-width: max-content;
     gap: 0px;
 }
-
-@media screen and (max-width: 1100px) {
-    .cardMedio .swiper-wrapper {
-        min-width: max-content;
-        gap: 35px;
-    }
-
-    .cardPequeno .swiper-wrapper {
-        min-width: max-content;
-        gap: 50px;
-    }
-}

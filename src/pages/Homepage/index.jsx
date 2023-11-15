@@ -32,8 +32,8 @@ export default function Homepage() {
                     <Swiper className={`swiper_container ${styles.carrosel}`}
                         effect={'coverflow'}
                         grabCursor={true}
-                        slidesPerView={1.4}
-                        spaceBetween={70}
+                        slidesPerView={1.2}
+                        spaceBetween={40}
                         autoplay={{
                             delay: 3000,
                             disableOnInteraction: false,
@@ -48,7 +48,10 @@ export default function Homepage() {
                         }}
 
                         breakpoints={{
-
+                            660: {
+                                slidesPerView: 1.4,
+                                spaceBetween: 70,
+                            },
 
                         }}
 
@@ -188,14 +191,55 @@ export default function Homepage() {
                 <div className='cardPequeno'>
                     <h1 className={`title-1 ${styles.title}`}>Próximos a você</h1>
                     <Swiper className={`swiper_container ${styles.carrosel}`}
-                        slidesPerView={4}
+                        slidesPerView={1.5}
                         spaceBetween={0}
-                        loop={true}
                         pagination={{
                             clickable: true,
                         }}
                         navigation={true}
                         modules={[Navigation]}
+                        breakpoints={{
+
+
+                            350: {
+                                slidesPerView: 2,
+                                spaceBetween: '50vw',
+                            },
+                            500: {
+                                slidesPerView: 2.5,
+                                spaceBetween: '0',
+                            },
+                            700: {
+                                slidesPerView: 3.5,
+                                spaceBetween: '0',
+                            },
+                            900: {
+                                slidesPerView: 4.5,
+                                spaceBetween: '0',
+                            },
+                            1065: {
+                                slidesPerView: 5.4,
+                                spaceBetween: '0vw',
+                            },
+
+                            1220: {
+                                slidesPerView: 6.5,
+                                spaceBetween: '5vw',
+                            },
+                            1500: {
+                                slidesPerView: 7.3,
+                                spaceBetween: '1vw',
+                                loop: false,
+                            },
+                            1700: {
+                                slidesPerView: 8.6,
+                                spaceBetween: '0vw',
+                                loop: false,
+
+                            },
+
+
+                        }}
                     >
                         <SwiperSlide>
                             <Card2
@@ -278,6 +322,27 @@ export default function Homepage() {
                                 linkImagem="https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png"
                                 titulo="lorem"
                                 fotoIcone="https://cdn0.br.psicologia-online.com/pt/posts/3/6/5/5_caracteristicas_de_uma_pessoa_boa_563_orig.jpg"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Card2
+                                linkImagem="https://oimparcial.com.br/app/uploads/2019/04/BASQUETE-DE-RUA.jpg"
+                                titulo="Basquetão da massa"
+                                fotoIcone="https://1.bp.blogspot.com/-eW5YwoQHN2s/UwXhiZ-CuQI/AAAAAAAAEhw/pg8JkD-Y3CU/s1600/1505309_544080092350393_1423345136_n.jpg"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Card2
+                                linkImagem="https://oimparcial.com.br/app/uploads/2019/04/BASQUETE-DE-RUA.jpg"
+                                titulo="Basquetão da massa"
+                                fotoIcone="https://1.bp.blogspot.com/-eW5YwoQHN2s/UwXhiZ-CuQI/AAAAAAAAEhw/pg8JkD-Y3CU/s1600/1505309_544080092350393_1423345136_n.jpg"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Card2
+                                linkImagem="https://oimparcial.com.br/app/uploads/2019/04/BASQUETE-DE-RUA.jpg"
+                                titulo="Basquetão da massa"
+                                fotoIcone="https://1.bp.blogspot.com/-eW5YwoQHN2s/UwXhiZ-CuQI/AAAAAAAAEhw/pg8JkD-Y3CU/s1600/1505309_544080092350393_1423345136_n.jpg"
                             />
                         </SwiperSlide>
 
