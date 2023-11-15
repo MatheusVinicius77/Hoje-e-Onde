@@ -11,7 +11,7 @@ export default function NewEventPage() {
     return (
         <div className={`${styles.container}`}>
             <div className={`${styles.sidebar}`}>
-                <Sidebar></Sidebar>
+                <Sidebar page={'NewEvent'}></Sidebar>
             </div>
             <div className={`${styles.navB}`}>
                 <Navbar></Navbar>

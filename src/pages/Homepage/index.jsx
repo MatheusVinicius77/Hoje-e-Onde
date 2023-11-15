@@ -21,7 +21,7 @@ export default function Homepage() {
     return (
         <div className={`${styles.container}`}>
             <div className={`${styles.sidebar}`}>
-                <Sidebar></Sidebar>
+                <Sidebar page={'Homepage'}></Sidebar>
             </div>
             <div className={`${styles.navB}`}>
                 <Navbar></Navbar>

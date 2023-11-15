@@ -18,7 +18,7 @@ import './bg.css'
 
 export default function Navb() {
     return (
-        <Navbar bg='light' data-bs-theme="dark" collapseOnSelect expand="lg" className="bg-body-tertiary bg-dark navbar-dark">
+        <Navbar style={{ width: '100%' }} bg='light' data-bs-theme="dark" collapseOnSelect expand="lg" className="bg-body-tertiary bg-dark navbar-dark">
             <Container>
                 <Navbar.Brand href="#home"><img src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -29,9 +29,9 @@ export default function Navb() {
                     </figure>
 
                     <Nav className="me-auto">
-                        <Nav.Link href="#features"><SidebarButton imgWidth={'30px'} id={'2'} icone={discover2} texto={'Inicio'} /></Nav.Link>
-                        <Nav.Link href="#features"><SidebarButton imgWidth={'30px'} id={'3'} icone={favorito} texto={'Favoritos'} /></Nav.Link>
-                        <Nav.Link href="#features"><SidebarButton imgWidth={'30px'} id={'4'} icone={newEvent} texto={'Novo Evento'} /></Nav.Link>
+                        <Nav.Link className='nav-link' href="#features"><SidebarButton imgWidth={'30px'} id={'2'} icone={discover2} texto={'Inicio'} /></Nav.Link>
+                        <Nav.Link className='nav-link' href="#features"><SidebarButton imgWidth={'30px'} id={'3'} icone={favorito} texto={'Favoritos'} /></Nav.Link>
+                        <Nav.Link className='nav-link' href="#features"><SidebarButton imgWidth={'30px'} id={'4'} icone={newEvent} texto={'Novo Evento'} /></Nav.Link>
                         <NavDropdown title="Filtrar" id="collasible-nav-dropdown">
                             <div >
                                 <Filtros></Filtros>

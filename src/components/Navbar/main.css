@@ -15,6 +15,7 @@
 }
 
 header {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,6 +52,7 @@ header div,
 nav {
     display: flex;
     align-items: center;
+
 }
 
 @media only screen and (max-width: 1024px) {

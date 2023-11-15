@@ -18,7 +18,7 @@ import { FormLabel } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 
-export default function Sidebar() {
+export default function Sidebar({ page }) {
 
     const [larguraTela, setLarguraTela] = useState(false)
     const [btnPressed, setBtnPressed] = useState(false);
@@ -47,11 +47,14 @@ export default function Sidebar() {
     const logWindowWidth = () => {
         setLarguraTela(window.innerWidth)
         console.log(`Largura da tela: ${window.innerWidth}px`);
-        // if (window.innerWidth <= 715) {
-        //     HandleClick()
-        //     console.log(btnPressed)
-        // }
     };
+
+    function HandleButtons(button) {
+
+        if (button == 'inicio') {
+            console.log('eae')
+        }
+    }
 
     useEffect(() => {
         let sidebar = document.getElementById('sidebar')
@@ -99,17 +102,20 @@ export default function Sidebar() {
                     </nav>
                     :
                     <nav className={`${styles.nav}`} >
-                        <SidebarButton id={'2'} icone={logoInicio} texto={'Inicio'} />
+                        <SidebarButton bgColor={(page == 'Homepage') ? 'rgba(29, 32, 62, 1)' : ''} onClick={() => HandleButtons('inicio')} id='btninicio' icone={logoInicio} texto={'Inicio'} />
                         <SidebarButton id={'3'} icone={favorito} texto={'Favoritos'} />
-                        <SidebarButton id={'4'} icone={newEvent} texto={'Novo Evento'} />
+                        <SidebarButton bgColor={(page == 'NewEvent') ? 'rgba(29, 32, 62, 1)' : ''} id={'4'} icone={newEvent} texto={'Novo Evento'} />
                     </nav>
                 }
-                {(btnPressed) ?
-                    <SidebarButton onClick={HandleClick} imgWidth={'50px'} imgColor={'white'} id={'2'} icone={sliders} />
-                    :
-                    <div className={`${styles.campoFiltros}`}>
-                        <Filtros></Filtros>
-                    </div>
+                {(page != 'NewEvent') ?
+                    (btnPressed) ?
+                        <SidebarButton onClick={HandleClick} imgWidth={'50px'} imgColor={'white'} id={'2'} icone={sliders} />
+                        :
+                        <div className={`${styles.campoFiltros}`}>
+                            <Filtros></Filtros>
+                        </div>
+    
+                    : ''
                 }
             </div>
             <footer id='responsiveFooter' className={(btnPressed) ? ` flex align-center ${styles.responsiveFooter}` : ` flex align-center ${styles.footer}`}>

@@ -159,12 +159,10 @@
         width: 100%;
         padding: 5px;
         height: min-content;
-
     }
 
     .categoryContainer h1 {
         text-align: center;
-
     }
 
 
@@ -228,7 +226,7 @@
     }
 
     .content {
-        background-color: rgb(17, 11, 11);
+        background-color: rgba(29, 32, 62, 1);
         margin-top: 65px;
         row-gap: 5vw;
         display: flex;
@@ -250,6 +248,7 @@
         display: flex;
         flex-wrap: wrap;
         height: fit-content;
+        row-gap: 10px;
     }
 
     .categoryBox div {

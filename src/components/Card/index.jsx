@@ -9,7 +9,7 @@ import CardModal from "../CardModal";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export default function Card({ fotoIcone, linkImagem, titulo, membros, distancia, hora }) {
+export default function Card({ width, fotoIcone, linkImagem, titulo, membros, distancia, hora }) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -17,7 +17,7 @@ export default function Card({ fotoIcone, linkImagem, titulo, membros, distancia
 
     return (
 
-        <div className={`${styles['content-card']}`} style={{ backgroundImage: `url(${linkImagem})` }}>
+        <div className={`${styles['content-card']}`} style={{ backgroundImage: `url(${linkImagem})`, width: width }}>
             {/* CONTENT BUTTON MODAL */}
             <Button variant="" className={styles.playbt} onClick={handleShow}>
 

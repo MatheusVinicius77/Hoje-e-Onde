@@ -10,6 +10,7 @@
 
 .btnPressed {
     background-color: #800080;
+    justify-content: center;
     font-size: 12px;
     width: 68px;
     height: 16px;

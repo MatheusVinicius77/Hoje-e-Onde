@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 
 
-export default function SidebarButton({ onClick, btnWidth, imgColor, btnHeigth, btnColor, fntSize, imgWidth, imgHeight, icone, texto }) {
+export default function SidebarButton({ bgColor, onClick, btnWidth, imgColor, btnHeigth, btnColor, fntSize, imgWidth, imgHeight, icone, texto }) {
     let url = ''
     if (texto == 'Inicio') {
         url = '/home'
@@ -16,8 +16,8 @@ export default function SidebarButton({ onClick, btnWidth, imgColor, btnHeigth, 
 
 
     return (
-        <Link className={styles.teste} to={url}>
-            <button onClick={onClick} style={{ width: btnWidth, color: imgColor, height: btnHeigth, color: btnColor }} className={`flex transparent ${styles.button}`} type="button">
+        <Link style={{ textDecoration: 'none' }} className={styles.teste} to={url}>
+            <button onClick={onClick} style={{ width: btnWidth, color: imgColor, height: btnHeigth, color: btnColor, backgroundColor: bgColor }} className={`flex transparent ${styles.button}`} type="button">
                 <img style={{ width: imgWidth, height: imgHeight }} src={icone} alt="" />
                 <h1 id={texto} style={{ fontSize: fntSize }} className='text-5 weight-3'>{texto}</h1>
             </button>
