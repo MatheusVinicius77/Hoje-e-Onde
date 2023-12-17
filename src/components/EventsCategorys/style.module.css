@@ -1,0 +1,22 @@
+.btnCategory {
+    background-color: rgba(57, 61, 94, 1);
+    font-size: 12px;
+    width: 68px;
+    height: 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.btnPressed {
+    background-color: #800080;
+    justify-content: center;
+    font-size: 12px;
+    width: 68px;
+    height: 16px;
+    border-radius: 10px;
+}
+
+.btnCategory:hover {
+    background-color: #800080;
+}

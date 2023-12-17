@@ -1,0 +1,155 @@
+.content-card * {
+    border-radius: 1.25rem;
+}
+
+.content-card {
+    width: 100%;
+    height: 13rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    resize: both;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    border-radius: 1.25rem;
+}
+
+.content-card:hover {
+    position: relative;
+    z-index: 1;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 10px 20px 0px var(--pink);
+}
+
+.playbt {
+    height: 47%;
+    width: 100%;
+}
+
+.image-card {
+    height: 54%;
+    width: 100%;
+    background-size: 100% 100%;
+    padding: 3.5%;
+    padding-left: 2%;
+
+    padding-bottom: 0;
+    display: grid;
+    background-image: url('../../assets/icons/navWave.svg');
+    background-size: cover;
+    background-position: center;
+    /* clip-path: polygon(0% 8%, 100% 4%, 100% 100%, 0% 100%); */
+
+    /* -webkit-clip-path: polygon(24% 37%, 8% 8%, 0 8%, 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(24% 37%, 8% 8%, 0 8%, 0 100%, 100% 100%, 100% 0); */
+    -webkit-clip-path: polygon(0 6%, 10% 9%, 18% 34%, 29% 41%, 49% 34%, 92% 1%, 100% 0, 100% 100%, 100% 98%, 0 100%);
+    clip-path: polygon(0 6%, 10% 9%, 18% 34%, 29% 41%, 49% 34%, 92% 1%, 100% 0, 100% 100%, 100% 98%, 0 100%);
+
+
+    /* -webkit-clip-path: polygon(100% 0, 29% 41%, 8% 8%, 0% 8%, 0 99%, 99% 98%);
+    clip-path: polygon(100% 0, 29% 41%, 8% 8%, 0% 8%, 0 99%, 99% 98%); */
+
+
+
+    backdrop-filter: blur(20px);
+
+}
+
+
+
+
+
+.iconePerfil {
+    height: 2.4rem;
+    width: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradiente);
+}
+
+.linha1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconesTop {
+    display: flex;
+    gap: 1vw;
+}
+
+.save,
+.share {
+    border-radius: 0;
+    height: 1rem;
+    width: 1rem;
+}
+
+.iconePerfil img {
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+.linha2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.linha2 h6 {
+    font-size: 90%;
+}
+
+.linha3 p {
+    color: white;
+    white-space: nowrap;
+
+}
+
+.linha3 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.likeContent {
+    display: flex;
+    align-content: center;
+    gap: 2px;
+}
+
+.likeContent img {
+    border-radius: 0;
+    height: 0.8rem;
+    width: 0.8rem;
+}
+
+@media (max-width: 500px) {
+
+    .linha2 h6 {
+        font-size: 4.5vw;
+    }
+
+    .linha3 {
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    .linha3 p {
+        font-size: 3vw;
+        color: white;
+    }
+
+
+
+}
+
+/* @media (max-width: 460px) {
+    .content-card {
+        width: 20rem;
+    }
+} */

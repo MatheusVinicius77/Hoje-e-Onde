@@ -1,0 +1,37 @@
+.finalizar {
+    border: 1px solid black;
+    width: 72%;
+    height: 1px;
+    align-self: center;
+    margin-bottom: 12px;
+}
+
+.filtroDistancia {
+    gap: 5px;
+    margin: 10px 0px 10px 0px;
+
+}
+
+.filtros {
+    margin: 0px 40px 24px;
+}
+
+.boxFiltro {
+    width: 96%;
+    border-radius: 5px;
+    padding-left: 8px;
+    background-color: rgba(29, 32, 62, 1);
+}
+
+div.multi-range-slider .thumb:before {
+    background: linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
+}
+
+.thumb {
+    background-color: white;
+    background: linear-gradient(180deg, #A73EE7 0%, #00EBFF 100%);
+
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}

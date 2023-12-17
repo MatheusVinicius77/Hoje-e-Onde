@@ -1,0 +1,56 @@
+:root {
+    --blue-primary: hsl(235, 36%, 18%);
+    --blue-light: #393D5E;
+    --white: #FFFFFF;
+    --white-secondary: rgba(255, 255, 255, 0.55);
+    --opacity: 70%;
+    --gradiente: linear-gradient(180deg, rgb(167, 62, 231) 0%, #00EBFF 100%);
+    --pink: rgb(167, 62, 231);
+    --blue: rgb(0, 235, 255);
+    --color-brand-0: rgba(57, 61, 94, 1);
+    --color-brand-1: rgba(29, 32, 62, 1);
+    --color-brand-2: rgba(0, 0, 0, 0.5);
+    /* FONTE DA FORMA DOS EVENTOS VERIFICADOS */
+    --font-family-1: 'Actor', sans-serif;
+
+    /* FORMA DOS TÍTULOS DOS EVENTOS (VERIFICADOS, PROXIMOS A VOCÊ) */
+    --font-family-2: 'Roboto Flex', sans-serif;
+
+    /* FONTES DAS CATEGORIAS, DISTANCIAS, FILTROS DA SIDEBAR, ELEMENTOS DENTRO DAS FORMAS  */
+    --font-family-3: 'Lato', sans-serif;
+
+    /* FONTE PARA USERNAME */
+    --font-family-4: 'Roboto Mono', sans-serif;
+
+
+    /* FONTE USADA NOS LOGINS */
+    --font-family-5: 'Roboto Condensed', sans-serif;
+
+    --font-size-1: 22px;
+    --font-size-2: 20px;
+    --font-size-3: 16px;
+    --font-size-4: 8px;
+    --font-size-5: 32px;
+    --font-size-6: 12px;
+
+
+    --weight-1: 100;
+    --weight-2: 400;
+    --weight-3: 700;
+
+
+
+
+
+
+
+
+
+}
+
+
+
+.cardPequeno .swiper-wrapper {
+    min-width: max-content;
+    gap: 0px;
+}
