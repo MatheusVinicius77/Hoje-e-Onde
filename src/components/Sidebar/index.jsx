@@ -46,7 +46,6 @@ export default function Sidebar({ page }) {
 
     const logWindowWidth = () => {
         setLarguraTela(window.innerWidth)
-        console.log(`Largura da tela: ${window.innerWidth}px`);
     };
 
     function HandleButtons(button) {
@@ -62,7 +61,6 @@ export default function Sidebar({ page }) {
         window.addEventListener('resize', logWindowWidth);
         return () => {
             window.removeEventListener('resize', logWindowWidth);
-
         };
     }, []);
 
@@ -114,7 +112,7 @@ export default function Sidebar({ page }) {
                         <div className={`${styles.campoFiltros}`}>
                             <Filtros></Filtros>
                         </div>
-    
+
                     : ''
                 }
             </div>

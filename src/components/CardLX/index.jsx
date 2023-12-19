@@ -7,7 +7,7 @@ import CardModal from "../CardModal";
 //Bootstrap
 import Modal from 'react-bootstrap/Modal';
 
-export default function CardLx({ fotoIcone, linkImagem }) {
+export default function CardLx({ evento, hora }) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -15,14 +15,14 @@ export default function CardLx({ fotoIcone, linkImagem }) {
 
     return (
 
-        <div className={styles["banner-card"]} style={{ backgroundImage: `url(${linkImagem})` }}>
+        <div className={styles["banner-card"]} style={{ backgroundImage: `url(${evento.imagem_evento})` }}>
             <div variant="" className={styles.playbt} onClick={handleShow}>
 
             </div>
             <section>
                 <button>
                     <img src={favorito} alt="" />
-                    <p className="text-7">2 Membros</p>
+                    <p className="text-1 white-text-color"></p>
                 </button>
 
 
@@ -35,9 +35,7 @@ export default function CardLx({ fotoIcone, linkImagem }) {
                 show={show}
                 onHide={handleClose}
             >
-                <Modal.Header closeButton>
-                </Modal.Header>
-                <CardModal fotoIcone={fotoIcone} linkImagem={linkImagem} />
+                <CardModal evento={evento} hora={hora} />
             </Modal>
         </div>
 

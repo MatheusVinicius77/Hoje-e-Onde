@@ -12,7 +12,6 @@
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
-
     border-radius: 1.25rem;
 }
 
@@ -96,8 +95,10 @@
 .linha2 {
     padding-left: 2rem;
     padding-right: 2rem;
-
+    white-space: nowrap;
 }
+
+
 
 .linha2 h6 {
     font-size: 90%;

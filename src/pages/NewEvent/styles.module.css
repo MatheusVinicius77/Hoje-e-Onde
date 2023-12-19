@@ -93,7 +93,8 @@
     padding: 7px;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    height: 5vh;
+    gap: 5px;
 }
 
 .categoryBox div {
@@ -110,6 +111,11 @@
     max-width: 60%;
     align-self: center;
     height: fit-content;
+}
+
+.categoryContainer h1{
+    text-align: center;
+    padding-bottom: 1em;
 }
 
 .div2 {

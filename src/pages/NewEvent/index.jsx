@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './styles.module.css'
 import Sidebar from '../../components/Sidebar/index'
 import Field from '../../components/FieldsNewEvents/index'
@@ -6,8 +6,8 @@ import EventCategory from '../../components/EventsCategorys/index'
 import Navbar from '../../components/Navbar/index'
 import Button from '../../components/LoginButton'
 import { placeholder } from '@babel/types'
+
 export default function NewEventPage() {
-    console.log(window.innerWidth)
     return (
         <div className={`${styles.container}`}>
             <div className={`${styles.sidebar}`}>
@@ -52,34 +52,26 @@ export default function NewEventPage() {
                         <h1 className='text-3 weight-3'>Selecione pelo menos duas categorias</h1>
                         <div className={`flex ${styles.categoryBox}`}>
                             <div className='flex column justify-evenly'>
-                                <EventCategory categoryName={'Esporte'} />
-                                <EventCategory categoryName={'Esporte'} />
-                                <EventCategory categoryName={'Esporte'} />
+                                <EventCategory categoryName={'Cultura'} />
+                            </div>
+                            <div className='flex column justify-evenly'>
+                                <EventCategory categoryName={'Tecnologia'} />
                             </div>
                             <div className='flex column justify-evenly'>
                                 <EventCategory categoryName={'Educação'} />
-                                <EventCategory categoryName={'Educação'} />
-                                <EventCategory categoryName={'Educação'} />
                             </div>
                             <div className='flex column justify-evenly'>
-                                <EventCategory categoryName={'Educação'} />
-                                <EventCategory categoryName={'Educação'} />
-                                <EventCategory categoryName={'Educação'} />
+                                <EventCategory categoryName={'Show'} />
                             </div>
                             <div className='flex column justify-evenly'>
-                                <EventCategory categoryName={'Corporativo'} />
-                                <EventCategory categoryName={'Corporativo'} />
-                                <EventCategory categoryName={'Corporativo'} />
+                                <EventCategory categoryName={'Saúde'} />
                             </div>
                             <div className='flex column justify-evenly'>
-                                <EventCategory categoryName={'Balada'} />
-                                <EventCategory categoryName={'Balada'} />
-                                <EventCategory categoryName={'Balada'} />
+                                <EventCategory categoryName={'Esportes'} />
                             </div>
                             <div className='flex column justify-evenly'>
-                                <EventCategory categoryName={'Esporte'} />
-                                <EventCategory categoryName={'Esporte'} />
-                                <EventCategory categoryName={'Esporte'} />
+                                <EventCategory categoryName={'Governo'} />
+
                             </div>
                         </div>
                     </div>

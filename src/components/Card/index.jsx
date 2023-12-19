@@ -9,15 +9,18 @@ import CardModal from "../CardModal";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export default function Card({ width, fotoIcone, linkImagem, titulo, membros, distancia, hora }) {
+export default function Card({ evento, width, hora }) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+
+    console.log(evento.nome_evento, evento.nome_evento.length)
+    let tamTitulo = evento.nome_evento.length
     return (
 
-        <div className={`${styles['content-card']}`} style={{ backgroundImage: `url(${linkImagem})`, width: width }}>
+        <div className={`${styles['content-card']}`} style={{ backgroundImage: `url(${evento.imagem_evento})`, width: width }}>
             {/* CONTENT BUTTON MODAL */}
             <Button variant="" className={styles.playbt} onClick={handleShow}>
 
@@ -27,7 +30,7 @@ export default function Card({ width, fotoIcone, linkImagem, titulo, membros, di
                 {/* BARRA DE INFORMAÇÕES */}
                 <div className={styles["linha1"]}>
                     <div className={styles["iconePerfil"]}>
-                        <img src={fotoIcone} alt="" />
+                        <img src={evento.usuario.user_img} alt="" />
                     </div>
                     <div className={styles["iconesTop"]}>
                         <img className={styles["share"]} src={share} alt="" srcset="" />
@@ -35,14 +38,13 @@ export default function Card({ width, fotoIcone, linkImagem, titulo, membros, di
                     </div>
                 </div>
                 <div className={styles["linha2"]}>
-                    <h6 className="text-1">{titulo}</h6>
+                    <h6  className={`text-1 ${styles.eventName}`}>{evento.nome_evento}</h6>
                 </div>
                 <div className={styles["linha3"]}>
                     <div className={styles["likeContent"]}>
                         <img src={like} alt="" />
-                        <p className="text-6">{membros} Membros</p>
+                        <p className="text-6">0 Membros</p>
                     </div>
-                    <p className="text-6">{distancia}Km</p>
                     <p className="text-6">{hora}hrs</p>
                 </div>
             </div>
@@ -51,7 +53,7 @@ export default function Card({ width, fotoIcone, linkImagem, titulo, membros, di
                 show={show}
                 onHide={handleClose}
             >
-                <CardModal fotoIcone={fotoIcone} linkImagem={linkImagem} titulo={titulo} distancia={distancia} hora={hora} />
+                <CardModal evento={evento} hora={hora} />
             </Modal>
         </div>
 
