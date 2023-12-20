@@ -11,7 +11,14 @@ import { Link } from 'react-router-dom'
 import bg from '../../assets/bgAuth.svg'
 import Categoria from '../../components/Sidebar/Filtros/Categorias/index'
 import { useNavigate } from 'react-router-dom'
+
+
+
 export default function Login() {
+    const [Email, setEmail] = useState();
+    const [Password, setPassword] = useState();
+    const [token, setToken] = useState(null);
+    
     const navigate = useNavigate()
     const [buttonPressed, setButtonPressed] = useState(false);
     //  Função que rastreia se o algum botão das categorias foi presionado. 
@@ -23,10 +30,36 @@ export default function Login() {
             setButtonPressed(true)
         }
     }
-
-    const handleContact = () => {
-        console.log('contato enviado')
-        return navigate('/home')
+    // autenticação
+    const handleSubmit = async () => {
+        try {
+          const response = await fetch('http://localhost:3000/auth/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              "email": Email,/* value from email input */
+              "senha":Password /* value from password input */
+            }),
+          });
+      
+          if (response.ok) {
+            const data = await response.json();
+            // Assuming the server returns a token upon successful authentication
+            const authToken = data.token;
+            setToken(authToken);
+            // Redirect to the home page
+            navigate('/home');
+          } else {
+            console.error('Authentication failed');
+            // Handle authentication failure, show an error message, etc.
+          }
+          console.log(response.data)
+        } catch (error) {
+          console.error('Error during authentication:', error);
+          // Handle other errors (network issues, etc.)
+        }
     };
 
     return (
@@ -34,14 +67,14 @@ export default function Login() {
             <div className={`${styles.containerAuth}`}>
                 <div className={`${styles.login}`}>
                     <h1 className='title-2'>Entrar</h1>
-                    <form className={`${styles.formAuth}`} action="#">
-                        <Input placeholder={'Email'} type={'email'} img={email} ></Input>
-                        <Input placeholder={'Senha'} type={'password'} img={password} ></Input>
+                    <form className={`${styles.formAuth}`} onSubmit={handleSubmit}>
+                        <Input placeholder={'Email'} type={'email'} img={email} onChange={e => setEmail(e.target.value)}></Input>
+                        <Input placeholder={'Senha'} type={'password'} img={password} onChange={e => setPassword(e.target.value)}></Input>
                         <div className={`   ${styles.lembrarConta}`}>
                             <button onClick={handleButtonState} className='transparent' type="button"><img className='white' src={(buttonPressed) ? squareCheck : squareRegular} alt="" srcset="" /></button>
                             <p className="text-7 white-text-color"> lembrar da minha conta</p>
                         </div>
-                        <Button onClick={handleContact} className={styles.dale}  style={{ textAlign: 'center', width: '100%', height: '4vh' }} placeholder={'Entrar'}></Button>
+                        <Button type="submit" className={styles.dale}  style={{ textAlign: 'center', width: '100%', height: '4vh' }} placeholder={'Entrar'}></Button>
                     </form>
                 </div>
                 <div className={`${styles.asideContent}`}>
@@ -59,14 +92,14 @@ export default function Login() {
                     <h1 className='title-2'>HOJE É ONDE?</h1>
                     <div className={`${styles.login}`}>
                         <h1 className='title-2'>Entrar</h1>
-                        <form className={`${styles.formAuth}`} action="#">
-                            <Input className={styles.input} placeholder={'Email'} type={'email'} img={email} ></Input>
-                            <Input className={styles.input} placeholder={'Senha'} type={'password'} img={password} ></Input>
+                        <form className={`${styles.formAuth}`} onSubmit={handleSubmit}>
+                            <Input className={styles.input} placeholder={'Email'} type={'email'} img={email} onChange={e => setEmail(e.target.value)}></Input>
+                            <Input className={styles.input} placeholder={'Senha'} type={'password'} img={password} onChange={e => setPassword(e.target.value)} ></Input>
                             <div className={`${styles.lembrarConta}`}>
                                 <button onClick={handleButtonState} className='transparent' type="button"><img className='white' src={(buttonPressed) ? squareCheck : squareRegular} alt="" srcset="" /></button>
                                 <p className="text-7 white-text-color"> lembrar da minha conta</p>
                             </div>
-                            <Button onClick={handleContact} style={{ width: '100%', height: '4vh' }} placeholder={'Entrar'}></Button>
+                            <Button type="submit" style={{ width: '100%', height: '4vh' }} placeholder={'Entrar'}></Button>
                         </form>
                         <p className={styles.p2}>Não tem uma conta? <Link to={'/cadastro'}>clique aqui!</Link></p>
                     </div>
