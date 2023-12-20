@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react'
+import { React, useState, useEffect, createContext, useContext } from 'react'
 import Navbar from '../../components/Navbar/index'
 import Sidebar from '../../components/Sidebar/index'
 import styles from './styles.module.css'
@@ -16,21 +16,44 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 
+import { appContext } from '../../App'
+
 const URL = 'http://localhost:3000/events'
+
+
 
 export default function Homepage() {
 
     const [eventos, setEventos] = useState([]);
-    useEffect(() => {
-        fetch(URL)
-            .then(response => response.json())
-            .then(data => setEventos(data))
-            .catch(error => console.error('Erro:', error));
-    }, [])
+    let filtros = []
+
+
+
 
     const eventosGold = eventos.filter((evento) => evento.usuario.nivel_usuario === 1)
     const eventosSilver = eventos.filter((evento) => evento.usuario.nivel_usuario === 2)
     const eventosBronze = eventos.filter((evento) => evento.usuario.nivel_usuario === 3)
+
+    const context = useContext(appContext)
+    filtros = [...context.value]
+    let params = ''
+    if (filtros.length === 1) {
+        params = `?categoria[]=${filtros[0].toLowerCase()}`
+        console.log('url: ' + URL + params)
+    } else if (filtros.length > 1) {
+        params = '?' + filtros.map((e) => `categoria=${e.toLowerCase()}`).join('&')
+    }
+    // events?categoria=show&categoria=cultura
+    console.log(params)
+    useEffect(() => {
+        fetch(URL + params)
+            .then(response => response.json())
+            .then(data => setEventos(data))
+            .catch(error => console.error('Erro:', error));
+
+    }, [context])
+
+
     return (
         <div className={`${styles.container}`}>
             <div className={`${styles.sidebar}`}>
@@ -41,7 +64,8 @@ export default function Homepage() {
             </div>
             <div className={`${styles.content}`}>
                 { /* CARD GRANDE */}
-                <div className='cardGrande' >
+
+                <div style={{ display: (eventosGold.length !== 0) ? 'block' : 'none' }}>
                     <Swiper className={`swiper_container ${styles.carrosel}`}
                         effect={'coverflow'}
                         grabCursor={true}
@@ -88,7 +112,10 @@ export default function Homepage() {
                 </div>
 
 
-                <div className='cardMedio'>
+
+
+
+                <div style={{ display: (eventosSilver.length !== 0) ? 'block' : 'none' }}>
                     { /* CARD MEDIO */}
                     <h1 className={`title-1 ${styles.title}`}>Eventos verificados</h1>
                     <Swiper className={`title-1 swiper_container ${styles.carrosel}`}
@@ -135,8 +162,9 @@ export default function Homepage() {
                     </Swiper>
                 </div>
 
-                { /* CARD PEQUENO */}
-                <div className='cardPequeno'>
+
+
+                <div style={{ display: (eventosBronze.length !== 0) ? 'block' : 'none' }}>
                     <h1 className={`title-1 ${styles.title}`}>Eventos Gerais</h1>
                     <Swiper className={`swiper_container ${styles.carrosel}`}
                         slidesPerView={1.5}
@@ -204,6 +232,8 @@ export default function Homepage() {
                         })}
                     </Swiper>
                 </div>
+
+
 
 
             </div>

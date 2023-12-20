@@ -64,6 +64,12 @@ export default function Sidebar({ page }) {
         };
     }, []);
 
+    const [data, setData] = useState('');
+
+    function childToParent(){
+
+    }
+
 
     return (
 
@@ -110,7 +116,7 @@ export default function Sidebar({ page }) {
                         <SidebarButton onClick={HandleClick} imgWidth={'50px'} imgColor={'white'} id={'2'} icone={sliders} />
                         :
                         <div className={`${styles.campoFiltros}`}>
-                            <Filtros></Filtros>
+                            <Filtros childToParent></Filtros>
                         </div>
 
                     : ''
