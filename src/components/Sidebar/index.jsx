@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import SidebarButton from './Sidebar-button'
 import favorito from '../../assets/icons/favorito.svg'
 import logoInicio from '../../assets/icons/explore.svg'
@@ -16,12 +16,17 @@ import sliders from '../../assets/icons/sliders.svg'
 import discover2 from '../../assets/icons/discover2.svg'
 import { FormLabel } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { appContext } from '../../App'
 
 
-export default function Sidebar({ page }) {
+const URL = 'http://localhost:3000/events?nome=show'
+
+export default function Sidebar({ page, handlePesquisaEventos }) {
 
     const [larguraTela, setLarguraTela] = useState(false)
     const [btnPressed, setBtnPressed] = useState(false);
+    const [resultadoPesquisa, setResultadoPesquisa] = useState([])
+    let [pesquisa, setPesquisa] = useState('')
     function HandleClick() {
         let sidebar = document.getElementById('sidebar')
         if (btnPressed) {
@@ -44,6 +49,17 @@ export default function Sidebar({ page }) {
         }
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const URL = 'http://localhost:3000/events?nome='; // Substitua pela sua URL base
+        const urlCompleta = URL.concat(pesquisa);
+        fetch(urlCompleta)
+            .then((response) => response.json())
+            .then((data) => handlePesquisaEventos(data))
+    };
+
+    const context = useContext(appContext)
+
     const logWindowWidth = () => {
         setLarguraTela(window.innerWidth)
     };
@@ -54,8 +70,8 @@ export default function Sidebar({ page }) {
             console.log('eae')
         }
     }
-
     useEffect(() => {
+
         let sidebar = document.getElementById('sidebar')
         logWindowWidth();
         window.addEventListener('resize', logWindowWidth);
@@ -63,13 +79,6 @@ export default function Sidebar({ page }) {
             window.removeEventListener('resize', logWindowWidth);
         };
     }, []);
-
-    const [data, setData] = useState('');
-
-    function childToParent(){
-
-    }
-
 
     return (
 
@@ -86,17 +95,20 @@ export default function Sidebar({ page }) {
             </div>
             <div id='formSearchResponsive' className={(btnPressed) ? `flex column ${styles.formSearchResponsive}` : `flex column ${styles.formSearch}`}>
                 {(btnPressed) ? < SidebarButton onClick={HandleClick} imgWidth={'50px'} id={'2'} icone={search} /> :
-                    <InputGroup style={{ height: 'fit-content', width: '95%' }} className={`mb-3`}>
-                        <Button style={{ borderRadius: '0', borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }} variant="outline-secondary" id="button-addon1">
-                            <img src={search} alt="" />
-                        </Button>
 
-                        <Form.Control placeholder='Pesquisar' style={{ width: '5px', backgroundColor: 'white' }}
-                            aria-label="Example text with button addon "
-                            aria-describedby="basic-addon1"
+                    <Form onSubmit={handleSubmit}>
+                        <InputGroup style={{ height: 'fit-content', width: '95%' }} className={`mb-3`}>
+                            <Button type='submit' style={{ borderRadius: '0', borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }} variant="outline-secondary" id="button-addon1">
+                                <img src={search} alt="" />
+                            </Button>
 
-                        />
-                    </InputGroup>
+                            <Form.Control placeholder='Pesquisar' style={{ width: '5px', backgroundColor: 'white' }}
+                                aria-label="Example text with button addon "
+                                aria-describedby="basic-addon1"
+                                onChange={(value) => { setPesquisa(value.target.value) }}
+                            />
+                        </InputGroup>
+                    </Form>
                 }
                 {(btnPressed) ?
                     <nav onClick={HandleClick} className={(btnPressed) ? ` flex column ${styles.navResponsive}` : `${styles.nav}`} >

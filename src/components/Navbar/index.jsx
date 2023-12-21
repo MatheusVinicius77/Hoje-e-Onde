@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -16,7 +16,21 @@ import logoUser from '../../assets/userIcons/user1.svg'
 import styles from './styles.module.css'
 import './bg.css'
 
-export default function Navb() {
+export default function Navb({ handlePesquisaEventos }) {
+
+    let [pesquisa, setPesquisa] = useState('')
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const URL = 'http://localhost:3000/events?nome='; // Substitua pela sua URL base
+        const urlCompleta = URL.concat(pesquisa);
+        fetch(urlCompleta)
+            .then((response) => response.json())
+            .then((data) => handlePesquisaEventos(data))
+    };
+
+    console.log(pesquisa)
+
     return (
         <Navbar style={{ width: '100%' }} bg='light' data-bs-theme="dark" collapseOnSelect expand="lg" className="bg-body-tertiary bg-dark navbar-dark">
             <Container>
@@ -37,14 +51,15 @@ export default function Navb() {
                                 <Filtros></Filtros>
                             </div>
                         </NavDropdown>
-                        <Form className="d-flex">
+                        <Form className="d-flex" onSubmit={handleSubmit}>
                             <Form.Control
                                 type="search"
                                 placeholder="Pesquisar"
                                 className="me-2"
                                 aria-label="Search"
+                                onChange={(value) => { setPesquisa(value.target.value) }}
                             />
-                            <Button variant="outline-success"><img src={search} alt="" /></Button>
+                            <Button type='submit' variant="outline-success"><img src={search} alt="" /></Button>
                         </Form>
 
                     </Nav>

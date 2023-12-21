@@ -8,6 +8,7 @@ import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router
 
 
 const appContext = createContext();
+const eventContext = createContext();
 
 const router = createBrowserRouter([
   {

@@ -25,10 +25,16 @@ const URL = 'http://localhost:3000/events'
 export default function Homepage() {
 
     const [eventos, setEventos] = useState([]);
+    const [eventosPequisa, setEventosPesquisa] = useState([])
+
+    function handlePesquisaEventos(e) {
+        setEventosPesquisa([...e])
+        setEventos([...e])
+    }
+
+    console.log(eventosPequisa, 'z')
+
     let filtros = []
-
-
-
 
     const eventosGold = eventos.filter((evento) => evento.usuario.nivel_usuario === 1)
     const eventosSilver = eventos.filter((evento) => evento.usuario.nivel_usuario === 2)
@@ -44,7 +50,6 @@ export default function Homepage() {
         params = '?' + filtros.map((e) => `categoria=${e.toLowerCase()}`).join('&')
     }
     // events?categoria=show&categoria=cultura
-    console.log(params)
     useEffect(() => {
         fetch(URL + params)
             .then(response => response.json())
@@ -52,19 +57,18 @@ export default function Homepage() {
             .catch(error => console.error('Erro:', error));
 
     }, [context])
-
-
     return (
         <div className={`${styles.container}`}>
             <div className={`${styles.sidebar}`}>
-                <Sidebar page={'Homepage'}></Sidebar>
+                <Sidebar page={'Homepage'} handlePesquisaEventos={handlePesquisaEventos}></Sidebar>
             </div>
-            <div className={`${styles.navB}`}>
-                <Navbar></Navbar>
+            <div className={`${styles.navB}`} >
+                <Navbar handlePesquisaEventos={handlePesquisaEventos}></Navbar>
             </div>
             <div className={`${styles.content}`}>
                 { /* CARD GRANDE */}
-
+                {(((filtros.length >= 1) || (eventosPequisa.length === 0)) && (eventosBronze.length + eventosSilver.length + eventosGold.length) == 0) ?
+                    <h1 className="white-text-color">Não há evento para essa pesquisa ou filtro solicitado.</h1> : ''}
                 <div style={{ display: (eventosGold.length !== 0) ? 'block' : 'none' }}>
                     <Swiper className={`swiper_container ${styles.carrosel}`}
                         effect={'coverflow'}
