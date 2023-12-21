@@ -5,6 +5,7 @@ import NewEvents from './pages/NewEvent'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import UserPage from './pages/UserPage';
 
 
 const appContext = createContext();
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/favoritos',
     element: <Favoritos />
+  },
+  {
+    path: '/userpage',
+    element: <UserPage />
   }
 
 ])
