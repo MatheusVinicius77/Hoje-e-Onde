@@ -87,7 +87,7 @@ export default function Sidebar({ page, handlePesquisaEventos }) {
             <div className={(btnPressed) ? ` align-center flex column ${styles.userInfoResponsive}` : ` align-center flex column ${styles.userInfo}`}>
                 <button id='btnHamb' onClick={HandleClick} type="button" className={`${styles.btnHamburguer}`}><img src={hamburguer} alt="" /></button>
                 <figure id='figure1' className={`${styles.figure1}`} onClick={HandleClick}>
-                    <img id='logo-user' className={` ${styles.userImg}`} src={user1} alt="" />
+                    <Link to={'/userpage'}><img id='logo-user' className={` ${styles.userImg}`} src={user1} alt="" /></Link>
                     {(btnPressed) ? '' : <h1 className='text-4 weight-3'>usuario sobrenome</h1>}
                 </figure>
 
