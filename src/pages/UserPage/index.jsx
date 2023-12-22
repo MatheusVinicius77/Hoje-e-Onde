@@ -40,7 +40,7 @@ export default function UserPage() {
                 <Navbar></Navbar>
             </div>
             <div className={`${styles.content}`}>
-                <form>
+                <form onSubmitCapture={() => document.getElementById('mensagem').style.display = "flex"}> 
                     <div className={styles.banner}>
                         <div className={styles.icone}>
                             <img src="https://i.pinimg.com/474x/c5/03/66/c503667bebbc1276a391a44fd0649ab5.jpg" alt="" />
@@ -68,6 +68,11 @@ export default function UserPage() {
                     <div className={styles.linha1}>
                        <input type="password" className={styles.inputField} disabled={true} defaultValue={`sggfsga`}/>                                   
                        <input type="date" className={styles.inputField} disabled={true} defaultValue={`2000-07-31`}/>                                   
+                    </div>
+                    <h4 id="mensagem" className={styles.mensagem}>Informações salvas com sucesso!</h4>                   
+                    <div className={styles.linha3}>
+                       <button className={styles.salvar} >Salvar</button>                                  
+                       <button className={styles.cancelar}>Cancelar</button>                                  
                     </div>
                 </form>
             </div >
