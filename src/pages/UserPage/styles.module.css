@@ -99,7 +99,22 @@
     cursor: pointer;
 }
 
-
+.linha3{display: flex; align-items: center; justify-content: space-around;}
+.linha3 button{
+    height: 6vh;
+    width: 30%;
+    justify-content: center;
+    border-radius: 8px;
+}
+.mensagem{
+    color: green;
+    text-align: center;
+    display: none;
+}
+.salvar{
+    background-color: var(--blue);
+}
+.cancelar{background-color: rgb(238, 82, 82);}
 @media screen and (max-width: 760px) {
     .content {
         row-gap: 0.6vw;
