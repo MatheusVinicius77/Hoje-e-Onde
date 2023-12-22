@@ -5,6 +5,14 @@
     max-height: fit-content;
     min-height: 100vh;
 }
+.navB {
+    display: none;
+}
+
+.sidebar {
+    max-width: fit-content;
+    z-index: 1;
+}
 
 
 .content {
@@ -35,15 +43,6 @@
     margin: 4rem;
 }
 
-.navB {
-    position: fixed;
-    transition: width 0.3s;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    z-index: 9999;
-}
-
 /* .navB {
     display: flex;
 } */
@@ -62,6 +61,7 @@
 }
 
 @media (max-width: 660px) {
+    .sidebar{display: none;}
     .navB {
         position: fixed;
         transition: width 0.3s;

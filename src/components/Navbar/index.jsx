@@ -38,8 +38,8 @@ export default function Navb({ handlePesquisaEventos }) {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <figure className={`${styles.figure}`}>
-                        <img id='logo-user' className={``} src={logoUser} alt="" />
-                        <h1 className='text-4 weight-3'>usuario sobrenome</h1>
+                        <img id='logo-user' className={``} src={"https://i.pinimg.com/474x/c5/03/66/c503667bebbc1276a391a44fd0649ab5.jpg"} alt="" />
+                        <h1 className='text-4 weight-3'>Levi Renato</h1>
                     </figure>
 
                     <Nav className="me-auto">

@@ -21,8 +21,11 @@ import { NavDropdown } from 'react-bootstrap'
 export default function Favoritos() {
     return (
         <div className={`${styles.container}`}>
-            <div className={`${styles.navB}`}>
-                <Navbar></Navbar>
+            <div className={`${styles.sidebar}`}>
+                <Sidebar page={"Favorite"}></Sidebar>
+            </div>
+            <div className={styles.navB} >
+                <Navbar/>
             </div>
             <div className={`${styles.content}`}>
                 <div className={styles.titulo}>

@@ -4,7 +4,7 @@ import share from '../../assets/icons/share.svg'
 import save from '../../assets/icons/save.svg'
 import favorito from '../../assets/icons/favorito.svg'
 
-export default function FormaR({ evento, hora }) {
+export default function FormaR({ evento, hora,curtida }) {
     return (
         <div className={`flex column ${styles.container}`}>
             <div className={`flex ${styles.container0}`}>
@@ -20,7 +20,7 @@ export default function FormaR({ evento, hora }) {
             <div className={`flex text-6 ${styles.container3}`}>
                 <button>
                     <img src={favorito} alt="" />
-                    <p className="text-7">2 Membros</p>
+                    <p className="text-7">{curtida} Membros</p>
                 </button>
 
                 <div>

@@ -7,7 +7,7 @@ import CardModal from "../CardModal";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export default function Card2({ evento, hora }) {
+export default function Card2({ evento, hora,curtida }) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -19,7 +19,7 @@ export default function Card2({ evento, hora }) {
             </Button>
 
             <div className={styles.legenda}>
-                <LegendaR evento={evento} hora={hora}></LegendaR>
+                <LegendaR evento={evento} hora={hora} curtida={evento.curtida}></LegendaR>
             </div>
 
             <Modal

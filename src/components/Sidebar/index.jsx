@@ -85,11 +85,11 @@ export default function Sidebar({ page, handlePesquisaEventos }) {
         <div id='sidebar' className={`  bg-brand-1  ${styles.sidebar}`}>
 
             <div className={(btnPressed) ? ` align-center flex column ${styles.userInfoResponsive}` : ` align-center flex column ${styles.userInfo}`}>
-                <button id='btnHamb' onClick={HandleClick} type="button" className={`${styles.btnHamburguer}`}><img src={hamburguer} alt="" /></button>
                 <figure id='figure1' className={`${styles.figure1}`} onClick={HandleClick}>
-                    <Link to={'/userpage'}><img id='logo-user' className={` ${styles.userImg}`} src={user1} alt="" /></Link>
-                    {(btnPressed) ? '' : <h1 className='text-4 weight-3'>usuario sobrenome</h1>}
+                    <Link to={'/userpage'}><img id='logo-user' className={` ${styles.userImg}`} src={"https://i.pinimg.com/474x/c5/03/66/c503667bebbc1276a391a44fd0649ab5.jpg"} alt="" /></Link>
+                    {(btnPressed) ? '' : <h1 className='text-4 weight-3'>Levi Renato</h1>}
                 </figure>
+                <button id='btnHamb' onClick={HandleClick} type="button" className={`${styles.btnHamburguer}`}><img src={hamburguer} alt="" /></button>
 
 
             </div>
@@ -119,7 +119,7 @@ export default function Sidebar({ page, handlePesquisaEventos }) {
                     :
                     <nav className={`${styles.nav}`} >
                         <SidebarButton bgColor={(page == 'Homepage') ? 'rgba(29, 32, 62, 1)' : ''} onClick={() => HandleButtons('inicio')} id='btninicio' icone={logoInicio} texto={'Inicio'} />
-                        <SidebarButton id={'3'} icone={favorito} texto={'Favoritos'} />
+                        <SidebarButton bgColor={(page == 'Favorite') ? 'rgba(29, 32, 62, 1)' : ''} id={'3'} icone={favorito} texto={'Favoritos'} />
                         <SidebarButton bgColor={(page == 'NewEvent') ? 'rgba(29, 32, 62, 1)' : ''} id={'4'} icone={newEvent} texto={'Novo Evento'} />
                     </nav>
                 }

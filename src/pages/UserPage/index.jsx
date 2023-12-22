@@ -1,16 +1,7 @@
-import { React, useState, useEffect, createContext, useContext } from 'react'
+import { React } from 'react'
 import Navbar from '../../components/Navbar/index'
 import Sidebar from '../../components/Sidebar/index'
 import styles from './styles.module.css'
-import Field from '../../components/FieldsNewEvents'
-import Button from '../../components/LoginButton'
-import edit from '../../assets/icons/edit.svg'
-// import required modules
-import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
-
-import { appContext } from '../../App'
-
-const URL = 'http://localhost:3000/events'
 
 
 
@@ -34,7 +25,7 @@ export default function UserPage() {
     return (
         <div className={`${styles.container}`}>
             <div className={`${styles.sidebar}`}>
-                <Sidebar page={'NewEvent'}></Sidebar>
+                <Sidebar></Sidebar>
             </div>
             <div className={`${styles.navB}`}>
                 <Navbar></Navbar>

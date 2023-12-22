@@ -9,7 +9,7 @@
 
 .figure img {
     width: 28%;
-
+    border-radius:100%;
 }
 
 .filtros {

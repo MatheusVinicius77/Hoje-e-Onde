@@ -79,7 +79,7 @@ export default function Homepage() {
                             delay: 3000,
                             disableOnInteraction: false,
                         }}
-                        loop={true}
+                        loop={false}
                         coverflowEffect={{
                             rotate: 0,
                             stretch: 0,
@@ -155,7 +155,7 @@ export default function Homepage() {
                             return (
                                 <SwiperSlide>
                                     <Card
-                                        membros="1500"
+                                        membros={evento.curtida}
                                         hora={data.getHours()}
                                         evento={evento}
                                     />
